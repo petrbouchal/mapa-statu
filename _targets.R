@@ -39,15 +39,9 @@ options(crayon.enabled = TRUE,
         yaml.eval.expr = TRUE)
 
 
-for (file in list.files("R", full.names = TRUE)) source(file)
+tar_source("R")
 
 suppressMessages(suppressWarnings(source("_targets_packages.R")))
-
-syst_urls <- paste0(c_syst_base_url, "/",
-                    stringr::str_replace(c_syst_files_online, "\\.", "-"),
-                    ".aspx")
-syst_files <- file.path(c_syst_dir, paste0("syst_", c_syst_years, ".xlsx"))
-
 
 # Orgchart ----------------------------------------------------------------
 
