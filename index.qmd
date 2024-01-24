@@ -1,0 +1,88 @@
+---
+title: "Mapa státu"
+subtitle: se zaměřením na útvary pracující s poznatky
+date: today
+---
+
+Tady jste správně, pokud:
+
+- se snažíte zjistit, kde ve struktuře nějakého úřadu se nachází konkrétní útvar
+- byste chtěli větět, kde a ve kterých úřadech najdete nějaké typy útvarů
+- vás zajímají útvary pracující s poznatky napříč státní správou
+
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6}
+
+:::{.box-height}
+
+### Organizační schémata všech organizací
+
+Vyberte jednu ze 237 organizací a prohlédněte si jeji organizačních schéma.
+
+Ve schématech jsou vyznačené typy útvarů pracujících s poznatky.
+
+Seznam útvarů je u každé organizace i v prohledávatelné tabulce.
+
+:::
+
+[[Procházet organizační schémata](/orgs.qmd)]{.btn-primary .btn}
+
+:::
+
+::: {.g-col-12 .g-col-md-6 .box-height}
+
+### Útvary pracující z poznatky v celé státní správě
+
+:::{.box-height}
+
+Seznam všech útvarů pracujících s poznatky
+
+- napříč 237 organizacemi
+- rozdělené podle typu
+- i podle organizace
+- v prohledávatelné tabulce
+
+:::
+
+[[Prohledávat analytické útvary](/analytici.qmd)]{.btn-primary .btn}
+
+:::
+
+:::
+
+:::{.callout-note}
+
+### Zdroje a obsah dat
+
+Pracujeme s údaji se systemizace služebních úřadů na základě [dostupných otevřených dat](https://data.gov.cz/datov%C3%A1-sada?iri=https://data.gov.cz/zdroj/datov%C3%A9-sady/00007064/846439496).
+
+Dostupné jsou údaje o celé struktuře úřadů, které spadají pod státní službu. Těch je celkem 237 a data ukazují jejich strukturu od oddělení po vedení.
+
+K dispozici jsou názvy útvarů a počty míst v nich zahrnutých.
+
+Podle názvů pak doplňujeme kategorizací útvarů podle různých oblastí práce s poznatky.
+
+```{r, echo=FALSE}
+targets::tar_load(orgdata_date)
+```
+
+
+*Aktualizováno podle otevřených dat z `r orgdata_date`.*
+
+:::
+
+### Data ke stažení
+
+Stáhněte si ve formátu CSV
+
+- [kompletní strukturu úřadů](data-export/struktura-nodes.csv)
+- [seznam všech útvarů s doplněnou kategorizací role ve vztahu k práci s poznatky](data-export/struktura-hierarchie .csv)
+- [dataset vztahů jednotlivých útvarů]((data-export/struktura-edges.csv))
+
+### Kód
+
+Kód, který data zpracovává, je dostupný na githubu [petrbouchal/mapa-statu](https://github.com/petrbouchal/mapa-statu).
+
+

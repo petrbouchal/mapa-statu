@@ -1,0 +1,21 @@
+---
+title: "Seznam institucí"
+listing:
+  id: urady
+  contents: "org_listing.yaml"
+  type: table
+  fields: [link, zkratka]
+  sort-ui: true
+  sort: [link, categories, zkratka]
+  categories: numbered
+  filter-ui: true
+  field-display-names: 
+    link: "Úřad"
+    zkratka: "Zkratka"
+---
+
+:::{#urady}
+:::
+
+
+Zpracovaná data jsou k mání na <https://github.com/petrbouchal/systemizace/tree/main/data-export>

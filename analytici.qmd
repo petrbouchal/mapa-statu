@@ -1,0 +1,114 @@
+---
+title: "Analytické útvary"
+format:
+  html:
+    page-layout: full
+---
+
+```{r setup, echo=FALSE, message=FALSE, warning=FALSE}
+library(dplyr)
+library(tidyr)
+library(crosstalk)
+library(reactable)
+
+knitr::opts_chunk$set(warning = FALSE, message = FALSE, echo = FALSE)
+```
+
+
+```{r load}
+targets::tar_load(orgdata_rect)
+targets::tar_load(orgdata_nodes_processed)
+targets::tar_load(urady_tbl)
+targets::tar_load(orgdata_rect)
+targets::tar_load(orgdata_date)
+targets::tar_load(orgdata_edges_processed)
+```
+
+```{r}
+parents <- orgdata_edges_processed |> 
+  select(id = to, parent_id = from) |> 
+  left_join(orgdata_nodes_processed |> select(parent_id = id, parent_nazev = nazev))
+```
+
+
+```{r}
+nodes_sub <- orgdata_nodes_processed |> 
+  filter(categ != "ostatní") |> 
+  select(-urad_skupina) |> 
+  left_join(urady_tbl |> select(urad_nazev, urad_id = id, urad_skupina), 
+            by = join_by(urad_nazev)) |> 
+  mutate(urad_href = paste0("org_", urad_id, ".html"),
+         urad_link = paste0("<a href='", urad_href, "'>", urad_nazev, "</a>")) |> 
+  left_join(parents) |> 
+  select(nazev, parent_nazev, urad_link, dpth, child_ftes, categ, urad_skupina, urad_nazev)
+
+analyticke_ids = nodes_sub$id
+
+urad_rect_marked <- orgdata_rect |> 
+  mutate(rn = row_number() |> as.character()) |> 
+  select(rn, ends_with("_id")) |> 
+  pivot_longer(cols = ends_with("_id")) |> 
+  group_by(rn) |> 
+  summarise(is_analytical = any(value %in% analyticke_ids))
+
+urad_rect <- orgdata_rect |> 
+  mutate(mista_celkem = mista_prac + mista_sluz) |> 
+  replace_na(list(mista_celkem = 0)) |> 
+  select(ends_with("nazev"), mista_celkem, -where(~all(is.na(.x)))) |> 
+  mutate(rn = row_number() |> as.character()) |> 
+  left_join(urad_rect_marked) |> 
+  select(-rn) |> 
+  mutate(is_analytical = if_else(is_analytical, "Ano", "Ne"))
+```
+
+```{r}
+nodes_shared <- SharedData$new(nodes_sub)
+```
+
+:::{.panel-input}
+:::{.columns}
+:::{.column width="33%"}
+
+
+```{r}
+filter_select("typ", "Kategorie útvaru", nodes_shared, ~nodes_sub$categ)
+```
+
+:::
+:::{.column width="34%"}
+
+```{r}
+filter_select("urad_typ", "Kategorie úřadu", nodes_shared, ~nodes_sub$urad_skupina)
+```
+
+:::
+
+:::{.column width="33%"}
+
+
+```{r}
+filter_select("urad", "Název úřadu", nodes_shared, ~nodes_sub$urad_nazev)
+```
+
+:::
+
+:::
+
+
+:::
+
+```{r}
+reactable(nodes_shared,
+          columns = list(urad_link = colDef(html = TRUE, 
+                                            name = "Instituce"),
+                         nazev = colDef("Útvar", minWidth = 120),
+                         urad_nazev = colDef(show = FALSE),
+                         parent_nazev = colDef("Nadřazený útvar"),
+                         dpth = colDef("Úroveň řízení", maxWidth = 99),
+                         child_ftes = colDef("Počet míst", maxWidth = 85),
+                         categ = colDef("Kategorie útvaru"),
+                         urad_skupina = colDef("Kategorie instituce")
+                         ),
+          filterable = TRUE, sortable = TRUE, showSortIcon = TRUE,
+          showSortable = TRUE)
+```

@@ -1,0 +1,181 @@
+---
+title: "{{< meta pagetitle >}}"
+title-prefix: ""
+editor: source
+params:
+  org_id: 11001131
+  org_nazev: Finanční úřad pro Jihomoravský kraj
+  # org_id: 11000003
+  # org_nazev: Ministerstvo dopravy
+---
+
+```{r setup, echo = FALSE, warning = FALSE, message = FALSE, include = FALSE}
+library(targets)
+library(visNetwork)
+library(tidygraph)
+library(ggraph)
+library(tidyr)
+library(dplyr)
+library(stringr)
+library(reactable)
+library(crosstalk)
+library(purrr)
+
+knitr::opts_chunk$set(fig.path = paste0("figures-org/", params$kraj), 
+                      warning = FALSE, message = FALSE, echo = FALSE)
+
+source("R/visnetwork.R")
+source("R/load-orgchart.R")
+```
+
+```{r load}
+targets::tar_load(orgdata_graph)
+targets::tar_load(urady_tbl)
+targets::tar_load(orgdata_nodes_processed)
+targets::tar_load(orgdata_rect)
+targets::tar_load(orgdata_edges_processed)
+```
+
+```{r}
+urad_zkr <- urady_tbl[urady_tbl$id == params$org_id,"urad_zkratka"][[1]]
+urad_nazev <- urady_tbl[urady_tbl$id == params$org_id,"urad_nazev"][[1]]
+urad_tbl <- orgdata_nodes_processed[orgdata_nodes_processed$urad_nazev == urad_nazev,]
+
+relevantni_ids <- urad_tbl[urad_tbl$categ != "ostatní",]$id
+relevantni_ids <- relevantni_ids[!is.na(relevantni_ids)]
+
+parents <- orgdata_edges_processed |> 
+  select(id = to, parent_id = from) |> 
+  left_join(orgdata_nodes_processed |> select(parent_id = id, parent_nazev = nazev))
+```
+
+```{r}
+layout_code <- if(urad_zkr == "ÚP ČR") "layout_with_kk" else "layout_nicely"
+```
+
+[←zpět na seznam](index.html)
+
+:::{.panel-tabset}
+
+## Schéma struktury
+
+::: callout-note
+### Legenda označení útvarů {#legenda-označení-útvarů}
+
+::: legend-box
+[Analýzy a evaluace]{.lg .anal} [Hodnocení, dopad]{.lg .hodnoc} [Výzkum]{.lg .vyzk} [Monitoring]{.lg .monit} [Strategie, politiky, koncepce]{.lg .strat} [Statistika]{.lg .stat} [Ostatní]{.lg}
+:::
+:::
+
+Počet lidí zobrazený při najetí na bod útvaru zahrnuje lidi pracující přímo v útvaru a všech jeho podřízených útvarech.
+
+```{r}
+make_org_visnetwork(orgdata_graph, urad_zkr, layout_code)
+```
+
+```{r}
+make_org_visnetwork(orgdata_graph, urad_zkr)
+```
+
+```{r}
+targets::tar_load(orgdata_date)
+```
+
+## Seznam útvarů
+
+```{r}
+urad_tbl_tbl <- urad_tbl |> 
+  select(nazev, categ, child_ftes, dpth) |> 
+  mutate(categ = as.factor(categ))
+
+urad_tbl_shared <- crosstalk::SharedData$new(urad_tbl_tbl)
+```
+
+- `Kategorie` vyznačuje analytické a podobné útvary (podle názvu), zbylé jsou označeny jako ostatní
+- `Počet míst`: služební i pracovní místa podle systemizace, součet pro útvar včetně jeho podřízených útvarů
+- `Úroveň řízení`: nižší číslo = vyšší úroveň
+
+:::{.panel-input}
+
+```{r}
+filter_checkbox("typ", "Kategorie útvaru", urad_tbl_shared, ~urad_tbl_tbl$categ, inline = TRUE)
+```
+
+:::
+
+```{r}
+urad_rect_marked <- orgdata_rect |> 
+  filter(level1_nazev == params$org_nazev) |> 
+  mutate(rn = row_number() |> as.character()) |> 
+  select(rn, ends_with("_id")) |> 
+  pivot_longer(cols = ends_with("_id")) |> 
+  group_by(rn) |> 
+  summarise(is_analytical = any(value %in% relevantni_ids))
+
+urad_rect <- orgdata_rect |> 
+  filter(level1_nazev == params$org_nazev) |> 
+  mutate(mista_celkem = mista_prac + mista_sluz) |> 
+  replace_na(list(mista_celkem = 0)) |> 
+  select(ends_with("nazev"), mista_celkem, -where(~all(is.na(.x)))) |> 
+  mutate(rn = row_number() |> as.character()) |> 
+  left_join(urad_rect_marked) |> 
+  select(-rn) |> 
+  mutate(is_analytical = if_else(is_analytical, "Ano", "Ne")) 
+```
+
+
+```{r}
+if(nrow(urad_rect) > 0) {
+  
+  reactable::reactable(urad_tbl_shared, filterable = TRUE, sortable = TRUE, 
+                       showSortable = TRUE, columns = list(nazev = colDef(name = "Název útvaru", minWidth = 150),
+                                                           categ = colDef(name = "Kategorie", minWidth = 150),
+                                                           dpth = colDef(name = "Úroveň řízení", maxWidth = 100),
+                                                           child_ftes = colDef(name = "Počet míst", maxWidth = 100, filterable = FALSE)
+                       ))
+} else {
+  cat("Chybí data")
+}
+```
+
+
+## Tabulka struktury
+
+```{r}
+urad_rect_shared <- SharedData$new(urad_rect)
+```
+
+:::{.panel-input}
+
+```{r}
+if(nrow(urad_rect) > 0) filter_checkbox("filter_anal", "Analytický či příbuzný útvar", urad_rect_shared, ~urad_rect$is_analytical, inline = TRUE)
+```
+
+:::
+
+```{r}
+names_relev <- names(urad_rect[grepl("level[0-9]_nazev", names(urad_rect))])
+levels_spec <- map(names_relev, function(x) {
+  number = as.numeric(str_extract(x, "[0-9]"))-1
+  colDef(name = paste("Úroveň", number))
+})
+names(levels_spec) <- names_relev
+```
+
+
+```{r}
+if(nrow(urad_rect) > 0) {
+  reactable(urad_rect_shared, columns = append(levels_spec,
+                                               list(is_analytical = colDef(show = FALSE),
+                                                    mista_celkem = colDef(name = "Počet míst", filterable = FALSE))),
+            filterable = TRUE, sortable = TRUE, showSortable = TRUE)
+  
+} else {
+  cat("Chybí data")
+}
+
+```
+
+:::
+
+Stav k `r orgdata_date`

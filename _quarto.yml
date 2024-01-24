@@ -1,0 +1,26 @@
+project:
+  type: website
+
+website:
+  title: "Mapa státu"
+  navbar:
+    left:
+      - orgs.qmd
+      - analytici.qmd
+  page-footer:
+    center:
+      - text: Kód na Githubu
+        href: "https://github.com/petrbouchal/mapa-statu"
+    left:
+      - text: "Autor: Petr Bouchal"
+        href: "https://petrbouchal.xyz"
+    right:
+      - "2024"
+
+format:
+  html:
+    lang: cs
+    language: cs
+    theme:
+      light: [cosmo, styles.scss, legend.css]
+
