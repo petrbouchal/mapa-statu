@@ -107,10 +107,12 @@ extract_orgdata_edges_from_graph <- function(orgdata_graph, ...) {
     as_tibble() |>
     left_join(orgdata_jednomini_nodes |>
                 mutate(from = row_number()) |>
-                select(from, from_new = id)) |>
+                select(from, from_new = id),
+              by = join_by(from)) |>
     left_join(orgdata_jednomini_nodes |>
                 mutate(to = row_number()) |>
-                select(to, to_new = id)) |>
+                select(to, to_new = id),
+              by = join_by(to)) |>
     select(-from, -to) |>
     rename(from = from_new, to = to_new)
   return(orgdata_jednomini_edges)
