@@ -78,8 +78,8 @@ targets::tar_load(orgdata_date)
 Stáhněte si ve formátu CSV
 
 - [kompletní strukturu úřadů](data-export/struktura-nodes.csv)
-- [seznam všech útvarů s doplněnou kategorizací role ve vztahu k práci s poznatky](data-export/struktura-hierarchie .csv)
-- [dataset vztahů jednotlivých útvarů]((data-export/struktura-edges.csv))
+- [seznam všech útvarů s doplněnou kategorizací role ve vztahu k práci s poznatky](data-export/struktura-hierarchie.csv)
+- [dataset vztahů jednotlivých útvarů](data-export/struktura-edges.csv)
 
 ### Kód
 
