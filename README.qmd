@@ -1,0 +1,115 @@
+---
+title: "Mapa státu"
+format: md
+---
+
+This repo contains the code to transform raw open data on the org structure of Czech public authorities (služební úřady) into useable data and a website for exploration.
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "",
+  echo = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  fig.retina = 3
+)
+```
+
+```{r, include = FALSE}
+source("_targets_packages.R")
+```
+
+```{r, echo = FALSE}
+targets::tar_load(orgdata_graph)
+targets::tar_load(orgdata_nodes_processed)
+targets::tar_load(orgdata_edges_processed)
+targets::tar_load(orgdata_rect)
+```
+
+```{r, include=FALSE}
+cnf <- config::get()
+nms_orig <- names(cnf)
+names(cnf) <- paste0("c_", names(cnf))
+list2env(cnf, envir = .GlobalEnv)
+names(cnf) <- names(nms_orig)
+rm(nms_orig)
+```
+
+### Organisational structures
+
+This data is published as one large XML file for all "služební úřady", i.e. organisations governed by Služební zákon, the Civil Service Act. It lists all organisational units within these organisations along their unique and internal IDs, names, parents (subordinate) units and staff counts (service an contract roles).
+
+In practice:
+
+- some ministries do not break down their units to the lowest level (MZV and MV leave out the bottom level)
+- names and abbrevietations are inputted differently by different orgs - some list include numbers, some names are in fact abbreviations etc., which makes text searching difficult
+- staff counts are missing for most orgs and undocumented, i.e. it is not clear whether it is actual contracts (occupied slots) or slots regardless of whether they are occupied; also not clear if it is FTEs or headcount/position counts.
+
+The code here transforms that data into
+
+- a graph and its components (nodes and edges) which forms a tree. This can be analysed in R via packages that can work with graphs (e.g. tidygraph, ggraph) or in other tools using the tables of nodes and edges (visNetwork)
+- a hierarchical table, listing all units, where each row denotes a units lowest in the hierarchy and columns list all its parents, one level per column. This is useful for search or for visualisation using e.g. D3network, tree mark in Observable Plot or the CollapsibleTree package.
+
+This data is exported as CSV in `r c_export_dir`
+
+For more info on data on public servants see [recent report](https://idea.cerge-ei.cz/zpravy/statni-zamestnanci-a-urednici-kde-pracuji-a-za-kolik) and [related repo](https://github.com/dan-bart/urednici_2021), plus an [older overview of available sources](https://petrbouchal.xyz/urednici/).
+
+#### Preview
+
+```{r sample-spider}
+orgdata_graph |>
+  activate(nodes) |>
+  # mutate(xx = node_distance_to(nazev %in% c("odd.zákl.vzd."))) |>
+  dplyr::filter(nazev != "nic", urad_zkratka == "GFŘ") |>
+  # ggraph("star") +
+  ggraph("kk") +
+  geom_node_point(aes(size = child_ftes)) +
+  geom_edge_diagonal0() +
+  geom_node_label(aes(label = zkratka), vjust = "outward") +
+  scale_x_reverse()
+```
+
+
+Graph
+
+```{r}
+orgdata_graph
+```
+
+Nodes
+
+```{r}
+orgdata_nodes_processed
+```
+
+Edges
+
+```{r}
+orgdata_edges_processed
+```
+
+Table
+
+```{r}
+orgdata_rect
+```
+
+
+
+### Technical: how to run this
+
+Code organised as a {targets} pipeline, with packages tracked by {renv}, so can be reproduced like so:
+
+```r
+renv::restore()
+targets::tar_make()
+```
+
+This will also generate a Quarto website, so Quarto is required.
+
+Tidy data ready for analysis are in `data-export`. Codebook is TBA.
+
+Rendered `r Sys.time()`
