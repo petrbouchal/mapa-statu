@@ -5,7 +5,7 @@ project:
 
 website:
   title: "Mapa státu"
-  site-url: https://petrbouchal.xyx/mapa-statu
+  site-url: https://petrbouchal.xyz/mapa-statu
   navbar:
     left:
       - orgs.qmd
