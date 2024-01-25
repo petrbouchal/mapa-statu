@@ -19,7 +19,7 @@ website:
     right:
       - "2024"
   twitter-card:
-    image: /opengraph.png
+    image: opengraph.png
     title: "Mapa státu: přehled veřejných institucí a jejich struktury"
     description: "Podívejte se na organizační struktury českých úřadů a analytické útvary v nich."
   open-graph:
