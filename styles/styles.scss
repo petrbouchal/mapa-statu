@@ -3,11 +3,11 @@ $h2-font-size:          1.6rem !default;
 $h3-font-size:          1.2rem !default;
 $h4-font-size:          1.05rem !default;
 $headings-font-weight:  700 !default;
-$headings-font-family: Vollkorn, serif;
+$headings-font-family: "IBM Plex Sans", sans-serif;
 
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "JetBrains Mono", "Liberation Mono", "Courier New", monospace !default;
 
-$cp-primary-blue: #003C71;
+$primary-blue: #00f;
 $cp-primary-grey: #BBBCBC;
 $cp-primary-red: #EF3340;
 $cp-secondary-blue: #389FFF;
@@ -16,28 +16,28 @@ $cp-secondary-lightblue: #CDE7FF;
 $cp-secondary-red: #F9B3B8;
 $cp-secondary-dark: #2F3030;
 
-$nav-tabs-link-active-border-color: $cp-secondary-lightblue $cp-secondary-lightblue rgba(255,255,255,0) $cp-secondary-lightblue;
-$nav-tabs-link-border-color: rgba(255,255,255,0) rgba(255,255,255,0) $cp-secondary-lightblue rgba(255,255,255,0) !important;
+$nav-tabs-link-active-border-color: $primary-blue $primary-blue rgba(255,255,255,0) $primary-blue;
+$nav-tabs-link-border-color: rgba(255,255,255,0) rgba(255,255,255,0) $primary-blue rgba(255,255,255,0) !important;
 
 $sidebar-bg: transparent;
 
-$footer-bg: $cp-primary-blue;
+$footer-bg: $primary-blue;
 $footer-fg: $cp-secondary-lightblue;
 
-$link-color:            $cp-primary-blue;
-$font-family-sans-serif: "Inter", Helvetica, Arial, Calibri, sans-serif;
-$navbar-bg:             $cp-secondary-lightblue;
-$navbar-fg:             $cp-primary-blue;
+$link-color:            $primary-blue;
+$font-family-sans-serif: "IBM Plex Sans", Helvetica, Arial, Calibri, sans-serif;
+$navbar-bg:             $primary-blue;
+$navbar-fg:             white;
 $body-bg:               white;
-$body-color:            $cp-primary-blue;
-$heading-color:         $cp-primary-blue;
+$body-color:            black;
+$heading-color:         $primary-blue;
 
-$nav-link-border-color: $cp-primary-blue;
-$nav-link-color: $cp-primary-blue;
-$nav-link-active-color: $cp-primary-blue;
-$navbar-hover-color: $cp-secondary-dark;
+$nav-link-border-color: $primary-blue;
+$nav-link-color: $primary-blue;
+$nav-link-active-color: $primary-blue;
+$navbar-hover-color: white;
 
-$callout-color-note: $cp-primary-blue;
+$callout-color-note: $primary-blue;
 $callout-color-tip: $cp-secondary-blue;
 $callout-color-warning: $cp-secondary-red;
 $callout-color-important: $cp-secondary-dark;
@@ -116,7 +116,7 @@ body {
 
 
 .navbar {
-  border-bottom: 7px solid $cp-primary-blue;
+  border-bottom: 0px solid $primary-blue;
 }
 
 .navbar .nav-link {
@@ -136,8 +136,8 @@ body {
   border-radius: 10px;
   padding-bottom: 5pt;
   width: fit-content;
-  background-color: $cp-primary-blue;
-  border-color: $cp-primary-blue;
+  background-color: $primary-blue;
+  border-color: $primary-blue;
 }
 
 .btn-resource {
@@ -146,16 +146,16 @@ body {
   font-size: 100%;
   width: fit-content;
   background-color: transparent;
-  border-color: $cp-primary-blue;
+  border-color: $primary-blue;
 }
 
 .btn-resource:hover {
   background-color: $cp-secondary-lightblue;
-  border-color: $cp-primary-blue;
+  border-color: $primary-blue;
 }
 
 .btn-resource a {
-  color: $cp-primary-blue !important;
+  color: $primary-blue !important;
   text-decoration: none !important;
 }
 
@@ -176,7 +176,7 @@ body {
 .card-title {
   font-size: 20pt;
   font-family: $headings-font-family !important;
-  color: $cp-primary-blue;
+  color: $primary-blue;
   margin-bottom: 10pt;
   font-weight: 800;
   font-family: $font-family-sans-serif;
@@ -189,7 +189,7 @@ body {
 .card-title-small {
   font-size: 17pt;
   font-family: $headings-font-family !important;
-  color: $cp-primary-blue !important;
+  color: $primary-blue !important;
   text-decoration: none !important;
   font-weight: 800;
   font-family: $font-family-sans-serif;
@@ -232,13 +232,13 @@ body {
 .card-alt {
   padding: 30px;
   border-radius: 0px;
-  background-color: $cp-primary-blue;
+  background-color: $primary-blue;
 }
 
 .card {
   border-radius: 10px;
   border-width: 2px;
-  border-color: $cp-primary-blue;
+  border-color: $primary-blue;
   padding: 5px;
   padding-bottom: 0px;
   background-color: white;
@@ -289,7 +289,7 @@ body {
 }
 
 .callout-tip {
-  border-left-color: $cp-primary-blue !important;
+  border-left-color: $primary-blue !important;
 }
 
 .callout-info {
@@ -311,20 +311,20 @@ body {
 }
 
 .callout-title-container {
-  color: $cp-primary-blue !important;
+  color: $primary-blue !important;
   padding-top: .1rem;
   opacity: 1 !important;
 }
 
 .callout-header {
   opacity: 1;
-  color: $cp-primary-blue;
+  color: $primary-blue;
 }
 
 .listing-category {
-  color: $cp-primary-blue !important;
+  color: $primary-blue !important;
   font-size: 6pt !important;
-  border-color: $cp-primary-blue !important;
+  border-color: $primary-blue !important;
 }
 
 .listing-categories {
@@ -342,7 +342,7 @@ body {
 }
 
 .column-margin {
-  color: $cp-primary-blue !important;
+  color: $primary-blue !important;
 }
 
 .toc-active .nav-link.active {
@@ -382,7 +382,7 @@ h2 {
 }
 
 .rizeni-blok {
-  background-color: $cp-primary-blue;
+  background-color: $primary-blue;
   padding: 20px;
 }
 
@@ -401,7 +401,7 @@ h2 {
 .btn-bloky {
   width: 150px;
   margin-bottom: 15pt;
-  background-color: $cp-primary-blue;
+  background-color: $primary-blue;
   border-radius: 10px;
   margin-left: 10pt;
   padding: 5pt;
@@ -417,7 +417,7 @@ h2 {
 }
 
 .blockquote {
-  color: $cp-primary-blue;
+  color: $primary-blue;
 }
 
 .nav-pills {

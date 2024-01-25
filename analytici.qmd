@@ -14,6 +14,14 @@ library(reactable)
 knitr::opts_chunk$set(warning = FALSE, message = FALSE, echo = FALSE)
 ```
 
+```{r}
+options(reactable.language = reactableLang(sortLabel = "Seřadit",
+                                           filterLabel = "Hledat", 
+                                           filterPlaceholder = "Hledat text",
+                                           searchLabel = "Hledat", 
+                                           searchPlaceholder = "Hledat všude"))
+```
+
 
 ```{r load}
 targets::tar_load(orgdata_rect)
@@ -109,6 +117,7 @@ reactable(nodes_shared,
                          categ = colDef("Kategorie útvaru"),
                          urad_skupina = colDef("Kategorie instituce")
                          ),
+          searchable = TRUE,
           filterable = TRUE, sortable = TRUE, showSortIcon = TRUE,
           showSortable = TRUE)
 ```

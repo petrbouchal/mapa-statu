@@ -21,6 +21,4 @@ format:
   html:
     lang: cs
     language: cs
-    theme:
-      light: [cosmo, styles.scss, legend.css]
 

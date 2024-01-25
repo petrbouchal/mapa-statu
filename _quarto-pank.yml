@@ -21,11 +21,20 @@ website:
         href: "https://petrbouchal.xyz"
     right:
       - "2024"
+  twitter-card:
+    image: https://pank.cz/images/opengraph.jpg
+    title: "Mapa státu: přehled veřejných institucí a jejich struktury. Součást PANK.cz."
+    description: "Podívejte se na organizační struktury českých úřadů a analytické útvary v nich."
+  open-graph:
+    image: https://pank.cz/images/opengraph.jpg
+    title: "Mapa státu: přehled veřejných institucí a jejich struktury. Součást PANK.cz."
+    description: "Podívejte se na organizační struktury českých úřadů a analytické útvary v nich."
+    locale: cs_CZ
 
 format:
   html:
     lang: cs
     language: cs
     theme:
-      light: [cosmo, styles.scss, legend.css]
+      light: [styles/cosmo.css, styles/styles-pank.scss, styles/legend.css]
 
