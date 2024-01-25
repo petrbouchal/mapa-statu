@@ -23,7 +23,7 @@ website:
     title: "Mapa státu: přehled veřejných institucí a jejich struktury"
     description: "Podívejte se na organizační struktury českých úřadů a analytické útvary v nich."
   open-graph:
-    image: /opengraph.png
+    image: opengraph.png
     title: "Mapa státu: přehled veřejných institucí a jejich struktury"
     description: "Podívejte se na organizační struktury českých úřadů a analytické útvary v nich."
     locale: cs_CZ
