@@ -66,21 +66,30 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Hledat"
   }
 }</script>
-<script src="site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<script src="site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
 <link href="site_libs/vis-9.1.0/vis-network.min.css" rel="stylesheet">
 <script src="site_libs/vis-9.1.0/vis-network.min.js"></script>
 <script src="site_libs/visNetwork-binding-2.1.2/visNetwork.js"></script>
 <script src="site_libs/jquery-3.5.1/jquery.min.js"></script>
-<link href="site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet">
-<script src="site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+<script src="site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
 <script src="site_libs/core-js-2.5.3/shim.min.js"></script>
-<script src="site_libs/react-17.0.0/react.min.js"></script>
-<script src="site_libs/react-17.0.0/react-dom.min.js"></script>
+<script src="site_libs/react-18.2.0/react.min.js"></script>
+<script src="site_libs/react-18.2.0/react-dom.min.js"></script>
 <script src="site_libs/reactwidget-1.0.0/react-tools.js"></script>
 <link href="site_libs/reactable-0.4.4/reactable.css" rel="stylesheet">
 <script src="site_libs/reactable-binding-0.4.4/reactable.js"></script>
 
 
+<meta property="og:title" content="Mapa státu: přehled veřejných institucí a jejich struktury">
+<meta property="og:description" content="Podívejte se na organizační struktury českých úřadů a analytické útvary v nich.">
+<meta property="og:image" content="/opengraph.png">
+<meta property="og:site_name" content="Mapa státu">
+<meta property="og:locale" content="cs_CZ">
+<meta name="twitter:title" content="Mapa státu: přehled veřejných institucí a jejich struktury">
+<meta name="twitter:description" content="Podívejte se na organizační struktury českých úřadů a analytické útvary v nich.">
+<meta name="twitter:image" content="/opengraph.png">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -102,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="./orgs.html"> 
-<span class="menu-text">Seznam institucí</span></a>
+<span class="menu-text">Všechny instituce</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./analytici.html"> 
@@ -165,14 +174,14 @@ Legenda označení útvarů
 <p>Počet lidí zobrazený při najetí na bod útvaru zahrnuje lidi pracující přímo v útvaru a všech jeho podřízených útvarech.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="visNetwork html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-8c44b4b31e5e421b8f95" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-8c44b4b31e5e421b8f95">{"x":{"nodes":{"id":["11001043"],"nazev":["Újezdní úřad Libavá"],"mista_prac":[0],"mista_sluz":[6],"predstaveny":["true"],"id_ext":["14840000"],"urad_zkratka":["ÚÚ Libavá"],"urad_nazev":["Újezdní úřad Libavá"],"zkratka":["ÚÚ Libavá"],"urad_skupina":["AČR: Újezdní úřady"],"label":["Újezdní úřad Libavá"],"analyticky":[false],"nazev_lower":["újezdní úřad libavá"],"categ":["ostatní"],"color":["#CCCCCC"],"mista_celkem":[6],"dpth":[1],"child_ftes":[6],"nazev_show":["Újezdní úřad Libavá<br />6 osob"],"value":[6],"color0":["#CCCCCC"],"title":["Újezdní úřad Libavá<br />6 osob"],"x":[-0.1984750869581745],"y":[-0.2869818628467796]},"edges":{"from":[],"to":[]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot","physics":false},"manipulation":{"enabled":false},"edges":{"arrows":"none","smooth":false},"interaction":{"zoomView":true,"zoomSpeed":1},"physics":{"stabilization":false}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","highlight":{"enabled":true,"hoverNearest":false,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":true,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"},"tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);","igraphlayout":{"type":"square"}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-9dffd11bc49f55a709e1" style="width:100%;height:464px;" class="visNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9dffd11bc49f55a709e1">{"x":{"nodes":{"id":["11001043"],"nazev":["Újezdní úřad Libavá"],"mista_prac":[0],"mista_sluz":[6],"predstaveny":["true"],"id_ext":["14840000"],"urad_zkratka":["ÚÚ Libavá"],"urad_nazev":["Újezdní úřad Libavá"],"zkratka":["ÚÚ Libavá"],"urad_skupina":["AČR: Újezdní úřady"],"label":["Újezdní úřad Libavá"],"analyticky":[false],"nazev_lower":["újezdní úřad libavá"],"categ":["ostatní"],"color":["#CCCCCC"],"mista_celkem":[6],"dpth":[1],"child_ftes":[6],"nazev_show":["Újezdní úřad Libavá<br />6 osob"],"value":[6],"color0":["#CCCCCC"],"title":["Újezdní úřad Libavá<br />6 osob"],"x":[-0.4493717762447383],"y":[-0.2175832562185258]},"edges":{"from":[],"to":[]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot","physics":false},"manipulation":{"enabled":false},"edges":{"arrows":"none","smooth":false},"interaction":{"zoomView":true,"zoomSpeed":1},"physics":{"stabilization":false}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","highlight":{"enabled":true,"hoverNearest":false,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":true,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"},"tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);","igraphlayout":{"type":"square"}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="visNetwork html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-8616359ec87eb08b3772" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-8616359ec87eb08b3772">{"x":{"nodes":{"id":["11001043"],"nazev":["Újezdní úřad Libavá"],"mista_prac":[0],"mista_sluz":[6],"predstaveny":["true"],"id_ext":["14840000"],"urad_zkratka":["ÚÚ Libavá"],"urad_nazev":["Újezdní úřad Libavá"],"zkratka":["ÚÚ Libavá"],"urad_skupina":["AČR: Újezdní úřady"],"label":["Újezdní úřad Libavá"],"analyticky":[false],"nazev_lower":["újezdní úřad libavá"],"categ":["ostatní"],"color":["#CCCCCC"],"mista_celkem":[6],"dpth":[1],"child_ftes":[6],"nazev_show":["Újezdní úřad Libavá<br />6 osob"],"value":[6],"color0":["#CCCCCC"],"title":["Újezdní úřad Libavá<br />6 osob"]},"edges":{"from":[],"to":[]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false},"edges":{"arrows":"none","smooth":{"enabled":true,"type":"cubicBezier"}},"interaction":{"zoomView":true,"zoomSpeed":1},"layout":{"hierarchical":{"enabled":true,"levelSeparation":1500,"nodeSpacing":100,"parentCentralization":true,"direction":"LR","sortMethod":"directed","shakeTowards":"roots"}}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","highlight":{"enabled":true,"hoverNearest":false,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":true,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"},"tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-05e04f8b779cee767e8e" style="width:100%;height:464px;" class="visNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-05e04f8b779cee767e8e">{"x":{"nodes":{"id":["11001043"],"nazev":["Újezdní úřad Libavá"],"mista_prac":[0],"mista_sluz":[6],"predstaveny":["true"],"id_ext":["14840000"],"urad_zkratka":["ÚÚ Libavá"],"urad_nazev":["Újezdní úřad Libavá"],"zkratka":["ÚÚ Libavá"],"urad_skupina":["AČR: Újezdní úřady"],"label":["Újezdní úřad Libavá"],"analyticky":[false],"nazev_lower":["újezdní úřad libavá"],"categ":["ostatní"],"color":["#CCCCCC"],"mista_celkem":[6],"dpth":[1],"child_ftes":[6],"nazev_show":["Újezdní úřad Libavá<br />6 osob"],"value":[6],"color0":["#CCCCCC"],"title":["Újezdní úřad Libavá<br />6 osob"]},"edges":{"from":[],"to":[]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false},"edges":{"arrows":"none","smooth":{"enabled":true,"type":"cubicBezier"}},"interaction":{"zoomView":true,"zoomSpeed":1},"layout":{"hierarchical":{"enabled":true,"levelSeparation":1500,"nodeSpacing":100,"parentCentralization":true,"direction":"LR","sortMethod":"directed","shakeTowards":"roots"}}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","highlight":{"enabled":true,"hoverNearest":false,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":true,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"},"tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
@@ -197,7 +206,7 @@ Legenda označení útvarů
   "map": {
     "ostatní": ["1"]
   },
-  "group": ["SharedData8c44b4b3"]
+  "group": ["SharedData9dffd11b"]
 }</script>
 </div>
 </div>
@@ -205,8 +214,8 @@ Legenda označení útvarů
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="reactable html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-2861e214e89d36544113" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-2861e214e89d36544113">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"nazev":["Újezdní úřad Libavá",null],"categ":["ostatní",null],"child_ftes":[6,"NA"],"dpth":[2,"NA"]},"columns":[{"id":"nazev","name":"Název útvaru","type":"character","minWidth":150},{"id":"categ","name":"Kategorie","type":"factor","minWidth":150},{"id":"child_ftes","name":"Počet míst","type":"numeric","filterable":false,"maxWidth":100},{"id":"dpth","name":"Úroveň řízení","type":"numeric","maxWidth":100}],"filterable":true,"showSortable":true,"crosstalkKey":["1","2"],"crosstalkGroup":"SharedData8c44b4b3","dataKey":"27f42edafe96b2ffed762f1c7a6ae3a1"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-955b73b4c88c915f9186" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-955b73b4c88c915f9186">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"nazev":["Újezdní úřad Libavá",null],"categ":["ostatní",null],"child_ftes":[6,"NA"],"dpth":[2,"NA"]},"columns":[{"id":"nazev","name":"Název útvaru","type":"character","minWidth":150},{"id":"categ","name":"Kategorie","type":"factor","minWidth":150},{"id":"child_ftes","name":"Počet míst","type":"numeric","filterable":false,"maxWidth":100},{"id":"dpth","name":"Úroveň řízení","type":"numeric","maxWidth":100}],"filterable":true,"showSortable":true,"crosstalkKey":["1","2"],"crosstalkGroup":"SharedData9dffd11b","dataKey":"27f42edafe96b2ffed762f1c7a6ae3a1"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
@@ -226,7 +235,7 @@ Legenda označení útvarů
   "map": {
     "Ne": ["1"]
   },
-  "group": ["SharedData1e5e421b"]
+  "group": ["SharedDatac49f55a7"]
 }</script>
 </div>
 </div>
@@ -234,8 +243,8 @@ Legenda označení útvarů
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="reactable html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-a20e0871adc4d4dee6d3" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-a20e0871adc4d4dee6d3">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"level1_nazev":["Újezdní úřad Libavá"],"mista_celkem":[0],"is_analytical":["Ne"]},"columns":[{"id":"level1_nazev","name":"Úroveň 0","type":"character"},{"id":"mista_celkem","name":"Počet míst","type":"numeric","filterable":false},{"id":"is_analytical","name":"is_analytical","type":"character","show":false}],"filterable":true,"showSortable":true,"crosstalkKey":["1"],"crosstalkGroup":"SharedData1e5e421b","dataKey":"00478d923e9c0bc976a87df92e27abaa"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-c16e053e2336264366e1" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-c16e053e2336264366e1">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"level1_nazev":["Újezdní úřad Libavá"],"mista_celkem":[0],"is_analytical":["Ne"]},"columns":[{"id":"level1_nazev","name":"Úroveň 0","type":"character"},{"id":"mista_celkem","name":"Počet míst","type":"numeric","filterable":false},{"id":"is_analytical","name":"is_analytical","type":"character","show":false}],"filterable":true,"showSortable":true,"crosstalkKey":["1"],"crosstalkGroup":"SharedDatac49f55a7","dataKey":"00478d923e9c0bc976a87df92e27abaa"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>

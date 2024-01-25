@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Mapa státu - zdroje</title>
+<title>Mapa státu - test-listing</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -64,6 +30,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -100,8 +68,103 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Hledat"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-ddd .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
 
+    const options = {
+      valueNames: ['listing-title','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-subtitle","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-ddd'] = new List('listing-ddd', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-xxx .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-subtitle","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-xxx'] = new List('listing-xxx', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Mapa státu: přehled veřejných institucí a jejich struktury">
+<meta property="og:description" content="Podívejte se na organizační struktury českých úřadů a analytické útvary v nich.">
+<meta property="og:image" content="/opengraph.png">
+<meta property="og:site_name" content="Mapa státu">
+<meta property="og:locale" content="cs_CZ">
+<meta name="twitter:title" content="Mapa státu: přehled veřejných institucí a jejich struktury">
+<meta name="twitter:description" content="Podívejte se na organizační struktury českých úřadů a analytické útvary v nich.">
+<meta name="twitter:image" content="/opengraph.png">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -123,7 +186,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="./orgs.html"> 
-<span class="menu-text">Seznam institucí</span></a>
+<span class="menu-text">Všechny instituce</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./analytici.html"> 
@@ -146,7 +209,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">zdroje</h1>
+<h1 class="title">test-listing</h1>
 </div>
 
 
@@ -163,80 +226,167 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Attaching package: 'dplyr'</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>The following objects are masked from 'package:stats':
+<style>
+    .category-buttons {
+      margin-bottom: 10px;
+    }
 
-    filter, lag</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>The following objects are masked from 'package:base':
+    .category-button.active {
+      background-color: #4CAF50;
+      color: white;
+    }
+    
+    .category-buttons {
+      <!-- margin-bottom: -50px; -->
+}
+  </style>
+<script>
+  function toggleFilter(category) {
+    const elements = document.querySelectorAll('.g-col-1');
+    const buttons = document.querySelectorAll('.category-buttons button');
+    const showAllButton = document.querySelector('.show-all');
 
-    intersect, setdiff, setequal, union</code></pre>
+    buttons.forEach(button => {
+      if (button === showAllButton) {
+        showAllButton.classList.remove('active');
+      } else if (button.textContent.toLowerCase().includes(category)) {
+        button.classList.toggle('active');
+      } else {
+        button.classList.remove('active');
+      }
+    });
+
+    elements.forEach(element => {
+      const elementCategories = element.getAttribute('data-categories').split(',');
+
+      if (category === 'all' || elementCategories.includes(category)) {
+        element.style.display = 'block';
+      } else {
+        element.style.display = 'none';
+      }
+    });
+  }
+
+  function showAll() {
+    const elements = document.querySelectorAll('.g-col-1');
+    const buttons = document.querySelectorAll('.category-buttons button');
+    const showAllButton = document.querySelector('.show-all');
+
+    buttons.forEach(button => {
+      button.classList.remove('active');
+    });
+
+    showAllButton.classList.add('active');
+
+    elements.forEach(element => {
+      element.style.display = 'block';
+    });
+  }
+</script>
+<div id="category-buttons" class="category-buttons">
+<p><button class="category-button" onclick="toggleFilter('a')">Filter A</button> <button class="category-button" onclick="toggleFilter('b')">Filter B</button> <button class="category-button" onclick="toggleFilter('c')">Filter C</button> <button class="category-button" onclick="toggleFilter('x')">Filter X</button> <button class="category-button" onclick="toggleFilter('d')">Filter D</button> <button class="show-all" onclick="showAll()">Show All</button></p>
 </div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(forcats)</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span></code><button title="Zkopírovat do schránky" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="listing-ddd" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="a,b,d">
+<a href="https://google.com" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Blah
+</h5>
+<div class="card-subtitle listing-subtitle">
+This and that
 </div>
-<section id="zdroje-a-výpočty" class="level1">
-<h1>Zdroje a výpočty</h1>
-<section id="volná-místa" class="level2">
-<h2 class="anchored" data-anchor-id="volná-místa">Volná místa</h2>
-</section>
-<section id="platové-tabulky" class="level2">
-<h2 class="anchored" data-anchor-id="platové-tabulky">Platové tabulky</h2>
-<ul>
-<li>pro 2021 a 2022 bereme z MF, 2023 z <a href="https://www.zakonyprolidi.cz/cs/2014-304#prilohy">přílohy nařízení</a> a vkládáme ručně do stejné datové formy</li>
-</ul>
-</section>
-<section id="kategorizace-úřadů" class="level2">
-<h2 class="anchored" data-anchor-id="kategorizace-úřadů">Kategorizace úřadů</h2>
-<ul>
-<li><a href="https://www.mvcr.cz/sluzba/clanek/seznam-sluzebnich-uradu.aspx">seznam</a> - je též ve výročce a měl by odpovídat číselníku; barvy naznačují kategorie ÚO; centrální; územní</li>
-<li>zde není jasné, jaký je vztah mezi celostátními, územními a ostaními (kategorie pro stanovování příplatků za vedení) a třemi kategoriemi z tomto dokumentu a ve výročce</li>
-<li>kategorie podle číselníku OVM moc nepomáhají</li>
-</ul>
-</section>
-<section id="pravidla-pro-výpočet-odhadovaného-platu" class="level2">
-<h2 class="anchored" data-anchor-id="pravidla-pro-výpočet-odhadovaného-platu">Pravidla pro výpočet odhadovaného platu</h2>
-<ul>
-<li><a href="https://www.mvcr.cz/sluzba/clanek/odmenovani-statnich-zamestnancu.aspx">celkové informace o odměňování</a></li>
-<li>výčet oborů, ve kterých lze vytvořit klíčová služební místa, je <a href="https://www.zakonyprolidi.cz/cs/2014-304#prilohy">v příloze I nařízení vlády</a></li>
-</ul>
-<section id="typická-služební-hodnocení" class="level3">
-<h3 class="anchored" data-anchor-id="typická-služební-hodnocení">Typická služební hodnocení</h3>
-<ul>
-<li>jsou ve výročce, následně je používám pouze přibližně, protože není jasné, jak využít informaci podle typu úřadu a asi nemá smysl pracovat s přesnými čísly za jednotlivé úrovně hodnocení</li>
-</ul>
-</section>
-<section id="výše-osobních-příplatků" class="level3">
-<h3 class="anchored" data-anchor-id="výše-osobních-příplatků">Výše osobních příplatků</h3>
-<ul>
-<li>jsou ve výročce, následně je používám pouze přibližně, protože není jasné, jak využít informaci podle typu úřadu a asi nemá smysl pracovat s přesnými čísly za jednotlivé kategorie</li>
-<li>ve výročce není jasné, co je ukazované procento
-<ul>
-<li>osobko jako % celého platu (zřejmě ano)</li>
-<li>osobko jako % horní hranice tarifu (tak jak se počítá při stanovování platu)</li>
-<li>osobko jako % tarifu daného člověka (asi ne)</li>
-</ul></li>
-</ul>
-</section>
-<section id="výše-příplatků-za-vedení" class="level3">
-<h3 class="anchored" data-anchor-id="výše-příplatků-za-vedení">Výše příplatků za vedení</h3>
-<ul>
-<li><a href="https://www.mvcr.cz/sluzba/soubor/priloha-c-2-rozpeti-priplatku-za-vedeni-pdf.aspx">příplatky za vedení</a> - zde třeba nějak použít kategorizaci úřadů</li>
-</ul>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="c,a,d">
+<a href="" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Doh
+</h5>
+<div class="card-subtitle listing-subtitle">
+https://google.com
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="c,b,d">
+<a href="" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Dah
+</h5>
+<div class="card-subtitle listing-subtitle">
+https://google.com
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+Žádné nalezené výsledky
+</div>
+</div>
+<div id="listing-xxx" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="a,b,x">
+<a href="https://google.com" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Blah
+</h5>
+<div class="card-subtitle listing-subtitle">
+This and that
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="c,a,x">
+<a href="" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Doh
+</h5>
+<div class="card-subtitle listing-subtitle">
+https://google.com
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="c,b,x">
+<a href="" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Dah
+</h5>
+<div class="card-subtitle listing-subtitle">
+https://google.com
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+Žádné nalezené výsledky
+</div>
+</div>
 
 
-</section>
-</section>
-</section>
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

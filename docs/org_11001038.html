@@ -66,21 +66,30 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Hledat"
   }
 }</script>
-<script src="site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<script src="site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
 <link href="site_libs/vis-9.1.0/vis-network.min.css" rel="stylesheet">
 <script src="site_libs/vis-9.1.0/vis-network.min.js"></script>
 <script src="site_libs/visNetwork-binding-2.1.2/visNetwork.js"></script>
 <script src="site_libs/jquery-3.5.1/jquery.min.js"></script>
-<link href="site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet">
-<script src="site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+<script src="site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
 <script src="site_libs/core-js-2.5.3/shim.min.js"></script>
-<script src="site_libs/react-17.0.0/react.min.js"></script>
-<script src="site_libs/react-17.0.0/react-dom.min.js"></script>
+<script src="site_libs/react-18.2.0/react.min.js"></script>
+<script src="site_libs/react-18.2.0/react-dom.min.js"></script>
 <script src="site_libs/reactwidget-1.0.0/react-tools.js"></script>
 <link href="site_libs/reactable-0.4.4/reactable.css" rel="stylesheet">
 <script src="site_libs/reactable-binding-0.4.4/reactable.js"></script>
 
 
+<meta property="og:title" content="Mapa státu: přehled veřejných institucí a jejich struktury">
+<meta property="og:description" content="Podívejte se na organizační struktury českých úřadů a analytické útvary v nich.">
+<meta property="og:image" content="/opengraph.png">
+<meta property="og:site_name" content="Mapa státu">
+<meta property="og:locale" content="cs_CZ">
+<meta name="twitter:title" content="Mapa státu: přehled veřejných institucí a jejich struktury">
+<meta name="twitter:description" content="Podívejte se na organizační struktury českých úřadů a analytické útvary v nich.">
+<meta name="twitter:image" content="/opengraph.png">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -102,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="./orgs.html"> 
-<span class="menu-text">Seznam institucí</span></a>
+<span class="menu-text">Všechny instituce</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./analytici.html"> 
@@ -165,14 +174,14 @@ Legenda označení útvarů
 <p>Počet lidí zobrazený při najetí na bod útvaru zahrnuje lidi pracující přímo v útvaru a všech jeho podřízených útvarech.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="visNetwork html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-22497358febb81f1124a" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-22497358febb81f1124a">{"x":{"nodes":{"id":["11001038","12003264","12003265","12003267","12003266"],"nazev":["KVV Zlín","Velení","Operační oddělení","Oddělení obranných příprav","Oddělení logistiky"],"mista_prac":[0,0,9,3,7],"mista_sluz":[0,7,1,6,1],"predstaveny":[null,"true","true","true","true"],"id_ext":["82070000","82070001","82074001","82074003","82074002"],"urad_zkratka":["KVV Zlín","KVV Zlín","KVV Zlín","KVV Zlín","KVV Zlín"],"urad_nazev":["KVV Zlín","KVV Zlín","KVV Zlín","KVV Zlín","KVV Zlín"],"zkratka":["KVV Zlín","Vel.","Oodd","OddOP","OddL"],"urad_skupina":["AČR: Krajská velitelství",null,null,null,null],"label":["KVV Zlín","Velení","Operační oddělení","Oddělení obranných příprav","Oddělení logistiky"],"analyticky":[false,false,false,false,false],"nazev_lower":["kvv zlín","velení","operační oddělení","oddělení obranných příprav","oddělení logistiky"],"categ":["ostatní","ostatní","ostatní","ostatní","ostatní"],"color":["#CCCCCC","#B3B3B3","#B3B3B3","#B3B3B3","#B3B3B3"],"mista_celkem":[0,7,10,9,8],"dpth":[1,2,2,2,2],"child_ftes":[34,7,10,9,8],"nazev_show":["KVV Zlín<br />34 osob","Velení<br />7 osob","Operační oddělení<br />10 osob","Oddělení obranných příprav<br />9 osob","Oddělení logistiky<br />8 osob"],"value":[34,7,10,9,8],"color0":["#CCCCCC","#B3B3B3","#B3B3B3","#B3B3B3","#B3B3B3"],"title":["KVV Zlín<br />34 osob","Velení<br />7 osob","Operační oddělení<br />10 osob","Oddělení obranných příprav<br />9 osob","Oddělení logistiky<br />8 osob"],"x":[0.0002144929011389518,1,-1,0.2562982186024862,-0.2583942998005548],"y":[0.0003271368879087522,0.2593770848188246,-0.2588339446290645,-1,1]},"edges":{"from":["11001038","11001038","11001038","11001038"],"to":["12003264","12003265","12003267","12003266"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot","physics":false},"manipulation":{"enabled":false},"edges":{"arrows":"none","smooth":false},"interaction":{"zoomView":true,"zoomSpeed":1},"physics":{"stabilization":false}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","highlight":{"enabled":true,"hoverNearest":false,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":true,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"},"tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);","igraphlayout":{"type":"square"}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-f31a3a648b4b897ef1e1" style="width:100%;height:464px;" class="visNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-f31a3a648b4b897ef1e1">{"x":{"nodes":{"id":["11001038","12003264","12003265","12003267","12003266"],"nazev":["KVV Zlín","Velení","Operační oddělení","Oddělení obranných příprav","Oddělení logistiky"],"mista_prac":[0,0,9,3,7],"mista_sluz":[0,7,1,6,1],"predstaveny":[null,"true","true","true","true"],"id_ext":["82070000","82070001","82074001","82074003","82074002"],"urad_zkratka":["KVV Zlín","KVV Zlín","KVV Zlín","KVV Zlín","KVV Zlín"],"urad_nazev":["KVV Zlín","KVV Zlín","KVV Zlín","KVV Zlín","KVV Zlín"],"zkratka":["KVV Zlín","Vel.","Oodd","OddOP","OddL"],"urad_skupina":["AČR: Krajská velitelství",null,null,null,null],"label":["KVV Zlín","Velení","Operační oddělení","Oddělení obranných příprav","Oddělení logistiky"],"analyticky":[false,false,false,false,false],"nazev_lower":["kvv zlín","velení","operační oddělení","oddělení obranných příprav","oddělení logistiky"],"categ":["ostatní","ostatní","ostatní","ostatní","ostatní"],"color":["#CCCCCC","#B3B3B3","#B3B3B3","#B3B3B3","#B3B3B3"],"mista_celkem":[0,7,10,9,8],"dpth":[1,2,2,2,2],"child_ftes":[34,7,10,9,8],"nazev_show":["KVV Zlín<br />34 osob","Velení<br />7 osob","Operační oddělení<br />10 osob","Oddělení obranných příprav<br />9 osob","Oddělení logistiky<br />8 osob"],"value":[34,7,10,9,8],"color0":["#CCCCCC","#B3B3B3","#B3B3B3","#B3B3B3","#B3B3B3"],"title":["KVV Zlín<br />34 osob","Velení<br />7 osob","Operační oddělení<br />10 osob","Oddělení obranných příprav<br />9 osob","Oddělení logistiky<br />8 osob"],"x":[0.001683769738732854,-0.3591345862596822,1,-1,0.3594846152775364],"y":[-0.002697924593420442,-1,-0.3595169738697406,0.3590995279693407,1]},"edges":{"from":["11001038","11001038","11001038","11001038"],"to":["12003264","12003265","12003267","12003266"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot","physics":false},"manipulation":{"enabled":false},"edges":{"arrows":"none","smooth":false},"interaction":{"zoomView":true,"zoomSpeed":1},"physics":{"stabilization":false}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","highlight":{"enabled":true,"hoverNearest":false,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":true,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"},"tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);","igraphlayout":{"type":"square"}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="visNetwork html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-5486a255994608a18dc5" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-5486a255994608a18dc5">{"x":{"nodes":{"id":["11001038","12003264","12003265","12003267","12003266"],"nazev":["KVV Zlín","Velení","Operační oddělení","Oddělení obranných příprav","Oddělení logistiky"],"mista_prac":[0,0,9,3,7],"mista_sluz":[0,7,1,6,1],"predstaveny":[null,"true","true","true","true"],"id_ext":["82070000","82070001","82074001","82074003","82074002"],"urad_zkratka":["KVV Zlín","KVV Zlín","KVV Zlín","KVV Zlín","KVV Zlín"],"urad_nazev":["KVV Zlín","KVV Zlín","KVV Zlín","KVV Zlín","KVV Zlín"],"zkratka":["KVV Zlín","Vel.","Oodd","OddOP","OddL"],"urad_skupina":["AČR: Krajská velitelství",null,null,null,null],"label":["KVV Zlín","Velení","Operační oddělení","Oddělení obranných příprav","Oddělení logistiky"],"analyticky":[false,false,false,false,false],"nazev_lower":["kvv zlín","velení","operační oddělení","oddělení obranných příprav","oddělení logistiky"],"categ":["ostatní","ostatní","ostatní","ostatní","ostatní"],"color":["#CCCCCC","#B3B3B3","#B3B3B3","#B3B3B3","#B3B3B3"],"mista_celkem":[0,7,10,9,8],"dpth":[1,2,2,2,2],"child_ftes":[34,7,10,9,8],"nazev_show":["KVV Zlín<br />34 osob","Velení<br />7 osob","Operační oddělení<br />10 osob","Oddělení obranných příprav<br />9 osob","Oddělení logistiky<br />8 osob"],"value":[34,7,10,9,8],"color0":["#CCCCCC","#B3B3B3","#B3B3B3","#B3B3B3","#B3B3B3"],"title":["KVV Zlín<br />34 osob","Velení<br />7 osob","Operační oddělení<br />10 osob","Oddělení obranných příprav<br />9 osob","Oddělení logistiky<br />8 osob"]},"edges":{"from":["11001038","11001038","11001038","11001038"],"to":["12003264","12003265","12003267","12003266"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false},"edges":{"arrows":"none","smooth":{"enabled":true,"type":"cubicBezier"}},"interaction":{"zoomView":true,"zoomSpeed":1},"layout":{"hierarchical":{"enabled":true,"levelSeparation":1500,"nodeSpacing":100,"parentCentralization":true,"direction":"LR","sortMethod":"directed","shakeTowards":"roots"}}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","highlight":{"enabled":true,"hoverNearest":false,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":true,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"},"tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-899dc3aa722203285da9" style="width:100%;height:464px;" class="visNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-899dc3aa722203285da9">{"x":{"nodes":{"id":["11001038","12003264","12003265","12003267","12003266"],"nazev":["KVV Zlín","Velení","Operační oddělení","Oddělení obranných příprav","Oddělení logistiky"],"mista_prac":[0,0,9,3,7],"mista_sluz":[0,7,1,6,1],"predstaveny":[null,"true","true","true","true"],"id_ext":["82070000","82070001","82074001","82074003","82074002"],"urad_zkratka":["KVV Zlín","KVV Zlín","KVV Zlín","KVV Zlín","KVV Zlín"],"urad_nazev":["KVV Zlín","KVV Zlín","KVV Zlín","KVV Zlín","KVV Zlín"],"zkratka":["KVV Zlín","Vel.","Oodd","OddOP","OddL"],"urad_skupina":["AČR: Krajská velitelství",null,null,null,null],"label":["KVV Zlín","Velení","Operační oddělení","Oddělení obranných příprav","Oddělení logistiky"],"analyticky":[false,false,false,false,false],"nazev_lower":["kvv zlín","velení","operační oddělení","oddělení obranných příprav","oddělení logistiky"],"categ":["ostatní","ostatní","ostatní","ostatní","ostatní"],"color":["#CCCCCC","#B3B3B3","#B3B3B3","#B3B3B3","#B3B3B3"],"mista_celkem":[0,7,10,9,8],"dpth":[1,2,2,2,2],"child_ftes":[34,7,10,9,8],"nazev_show":["KVV Zlín<br />34 osob","Velení<br />7 osob","Operační oddělení<br />10 osob","Oddělení obranných příprav<br />9 osob","Oddělení logistiky<br />8 osob"],"value":[34,7,10,9,8],"color0":["#CCCCCC","#B3B3B3","#B3B3B3","#B3B3B3","#B3B3B3"],"title":["KVV Zlín<br />34 osob","Velení<br />7 osob","Operační oddělení<br />10 osob","Oddělení obranných příprav<br />9 osob","Oddělení logistiky<br />8 osob"]},"edges":{"from":["11001038","11001038","11001038","11001038"],"to":["12003264","12003265","12003267","12003266"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false},"edges":{"arrows":"none","smooth":{"enabled":true,"type":"cubicBezier"}},"interaction":{"zoomView":true,"zoomSpeed":1},"layout":{"hierarchical":{"enabled":true,"levelSeparation":1500,"nodeSpacing":100,"parentCentralization":true,"direction":"LR","sortMethod":"directed","shakeTowards":"roots"}}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","highlight":{"enabled":true,"hoverNearest":false,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":true,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"},"tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
@@ -197,7 +206,7 @@ Legenda označení útvarů
   "map": {
     "ostatní": ["1", "2", "3", "4", "5"]
   },
-  "group": ["SharedData22497358"]
+  "group": ["SharedDataf31a3a64"]
 }</script>
 </div>
 </div>
@@ -205,8 +214,8 @@ Legenda označení útvarů
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="reactable html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-33eeca64cb80a3dcef42" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-33eeca64cb80a3dcef42">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"nazev":["KVV Zlín","Velení","Operační oddělení","Oddělení obranných příprav","Oddělení logistiky",null],"categ":["ostatní","ostatní","ostatní","ostatní","ostatní",null],"child_ftes":[34,7,10,9,8,"NA"],"dpth":[2,3,3,3,3,"NA"]},"columns":[{"id":"nazev","name":"Název útvaru","type":"character","minWidth":150},{"id":"categ","name":"Kategorie","type":"factor","minWidth":150},{"id":"child_ftes","name":"Počet míst","type":"numeric","filterable":false,"maxWidth":100},{"id":"dpth","name":"Úroveň řízení","type":"numeric","maxWidth":100}],"filterable":true,"showSortable":true,"crosstalkKey":["1","2","3","4","5","6"],"crosstalkGroup":"SharedData22497358","dataKey":"abdb145a7b9a722893fc20937f844d97"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-c56ab96fcef13cd31033" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-c56ab96fcef13cd31033">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"nazev":["KVV Zlín","Velení","Operační oddělení","Oddělení obranných příprav","Oddělení logistiky",null],"categ":["ostatní","ostatní","ostatní","ostatní","ostatní",null],"child_ftes":[34,7,10,9,8,"NA"],"dpth":[2,3,3,3,3,"NA"]},"columns":[{"id":"nazev","name":"Název útvaru","type":"character","minWidth":150},{"id":"categ","name":"Kategorie","type":"factor","minWidth":150},{"id":"child_ftes","name":"Počet míst","type":"numeric","filterable":false,"maxWidth":100},{"id":"dpth","name":"Úroveň řízení","type":"numeric","maxWidth":100}],"filterable":true,"showSortable":true,"crosstalkKey":["1","2","3","4","5","6"],"crosstalkGroup":"SharedDataf31a3a64","dataKey":"abdb145a7b9a722893fc20937f844d97"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
@@ -226,7 +235,7 @@ Legenda označení útvarů
   "map": {
     "Ne": ["1", "2", "3", "4"]
   },
-  "group": ["SharedDatafebb81f1"]
+  "group": ["SharedData8b4b897e"]
 }</script>
 </div>
 </div>
@@ -234,8 +243,8 @@ Legenda označení útvarů
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="reactable html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-6b028262c49751fbf1ab" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-6b028262c49751fbf1ab">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"level1_nazev":["KVV Zlín","KVV Zlín","KVV Zlín","KVV Zlín"],"level2_nazev":["Velení","Operační oddělení","Oddělení obranných příprav","Oddělení logistiky"],"mista_celkem":[7,10,9,8],"is_analytical":["Ne","Ne","Ne","Ne"]},"columns":[{"id":"level1_nazev","name":"Úroveň 0","type":"character"},{"id":"level2_nazev","name":"Úroveň 1","type":"character"},{"id":"mista_celkem","name":"Počet míst","type":"numeric","filterable":false},{"id":"is_analytical","name":"is_analytical","type":"character","show":false}],"filterable":true,"showSortable":true,"crosstalkKey":["1","2","3","4"],"crosstalkGroup":"SharedDatafebb81f1","dataKey":"7f04c8e61a1a8eb252489c7495664dd7"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-4d886ee8775c75a04dd6" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-4d886ee8775c75a04dd6">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"level1_nazev":["KVV Zlín","KVV Zlín","KVV Zlín","KVV Zlín"],"level2_nazev":["Velení","Operační oddělení","Oddělení obranných příprav","Oddělení logistiky"],"mista_celkem":[7,10,9,8],"is_analytical":["Ne","Ne","Ne","Ne"]},"columns":[{"id":"level1_nazev","name":"Úroveň 0","type":"character"},{"id":"level2_nazev","name":"Úroveň 1","type":"character"},{"id":"mista_celkem","name":"Počet míst","type":"numeric","filterable":false},{"id":"is_analytical","name":"is_analytical","type":"character","show":false}],"filterable":true,"showSortable":true,"crosstalkKey":["1","2","3","4"],"crosstalkGroup":"SharedData8b4b897e","dataKey":"7f04c8e61a1a8eb252489c7495664dd7"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>

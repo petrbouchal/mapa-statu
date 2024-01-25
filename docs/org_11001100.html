@@ -66,21 +66,30 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Hledat"
   }
 }</script>
-<script src="site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<script src="site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
 <link href="site_libs/vis-9.1.0/vis-network.min.css" rel="stylesheet">
 <script src="site_libs/vis-9.1.0/vis-network.min.js"></script>
 <script src="site_libs/visNetwork-binding-2.1.2/visNetwork.js"></script>
 <script src="site_libs/jquery-3.5.1/jquery.min.js"></script>
-<link href="site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet">
-<script src="site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+<script src="site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
 <script src="site_libs/core-js-2.5.3/shim.min.js"></script>
-<script src="site_libs/react-17.0.0/react.min.js"></script>
-<script src="site_libs/react-17.0.0/react-dom.min.js"></script>
+<script src="site_libs/react-18.2.0/react.min.js"></script>
+<script src="site_libs/react-18.2.0/react-dom.min.js"></script>
 <script src="site_libs/reactwidget-1.0.0/react-tools.js"></script>
 <link href="site_libs/reactable-0.4.4/reactable.css" rel="stylesheet">
 <script src="site_libs/reactable-binding-0.4.4/reactable.js"></script>
 
 
+<meta property="og:title" content="Mapa státu: přehled veřejných institucí a jejich struktury">
+<meta property="og:description" content="Podívejte se na organizační struktury českých úřadů a analytické útvary v nich.">
+<meta property="og:image" content="/opengraph.png">
+<meta property="og:site_name" content="Mapa státu">
+<meta property="og:locale" content="cs_CZ">
+<meta name="twitter:title" content="Mapa státu: přehled veřejných institucí a jejich struktury">
+<meta name="twitter:description" content="Podívejte se na organizační struktury českých úřadů a analytické útvary v nich.">
+<meta name="twitter:image" content="/opengraph.png">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -102,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="./orgs.html"> 
-<span class="menu-text">Seznam institucí</span></a>
+<span class="menu-text">Všechny instituce</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./analytici.html"> 
@@ -165,14 +174,14 @@ Legenda označení útvarů
 <p>Počet lidí zobrazený při najetí na bod útvaru zahrnuje lidi pracující přímo v útvaru a všech jeho podřízených útvarech.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="visNetwork html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-8daa0f67ba5a1b586682" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-8daa0f67ba5a1b586682">{"x":{"nodes":{"id":["11001100"],"nazev":["Zeměm. a kat. inspektorát v Brně"],"mista_prac":[2],"mista_sluz":[14],"predstaveny":["true"],"id_ext":["79910000"],"urad_zkratka":["ZKI Brn"],"urad_nazev":["Zeměm. a kat. inspektorát v Brně"],"zkratka":["ZKI Brn"],"urad_skupina":["Katastr"],"label":["Zeměm. a kat. inspektorát v Brně"],"analyticky":[false],"nazev_lower":["zeměm. a kat. inspektorát v brně"],"categ":["ostatní"],"color":["#CCCCCC"],"mista_celkem":[16],"dpth":[1],"child_ftes":[16],"nazev_show":["Zeměm. a kat. inspektorát v Brně<br />16 osob"],"value":[16],"color0":["#CCCCCC"],"title":["Zeměm. a kat. inspektorát v Brně<br />16 osob"],"x":[-0.2998275766370306],"y":[-0.119103942903387]},"edges":{"from":[],"to":[]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot","physics":false},"manipulation":{"enabled":false},"edges":{"arrows":"none","smooth":false},"interaction":{"zoomView":true,"zoomSpeed":1},"physics":{"stabilization":false}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","highlight":{"enabled":true,"hoverNearest":false,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":true,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"},"tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);","igraphlayout":{"type":"square"}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-edf5bf66839e14d6d6ad" style="width:100%;height:464px;" class="visNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-edf5bf66839e14d6d6ad">{"x":{"nodes":{"id":["11001100"],"nazev":["Zeměm. a kat. inspektorát v Brně"],"mista_prac":[2],"mista_sluz":[14],"predstaveny":["true"],"id_ext":["79910000"],"urad_zkratka":["ZKI Brn"],"urad_nazev":["Zeměm. a kat. inspektorát v Brně"],"zkratka":["ZKI Brn"],"urad_skupina":["Katastr"],"label":["Zeměm. a kat. inspektorát v Brně"],"analyticky":[false],"nazev_lower":["zeměm. a kat. inspektorát v brně"],"categ":["ostatní"],"color":["#CCCCCC"],"mista_celkem":[16],"dpth":[1],"child_ftes":[16],"nazev_show":["Zeměm. a kat. inspektorát v Brně<br />16 osob"],"value":[16],"color0":["#CCCCCC"],"title":["Zeměm. a kat. inspektorát v Brně<br />16 osob"],"x":[0.143246995685991],"y":[-0.3467283614474289]},"edges":{"from":[],"to":[]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot","physics":false},"manipulation":{"enabled":false},"edges":{"arrows":"none","smooth":false},"interaction":{"zoomView":true,"zoomSpeed":1},"physics":{"stabilization":false}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","highlight":{"enabled":true,"hoverNearest":false,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":true,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"},"tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);","igraphlayout":{"type":"square"}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="visNetwork html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-2537db31a62778ea77d0" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-2537db31a62778ea77d0">{"x":{"nodes":{"id":["11001100"],"nazev":["Zeměm. a kat. inspektorát v Brně"],"mista_prac":[2],"mista_sluz":[14],"predstaveny":["true"],"id_ext":["79910000"],"urad_zkratka":["ZKI Brn"],"urad_nazev":["Zeměm. a kat. inspektorát v Brně"],"zkratka":["ZKI Brn"],"urad_skupina":["Katastr"],"label":["Zeměm. a kat. inspektorát v Brně"],"analyticky":[false],"nazev_lower":["zeměm. a kat. inspektorát v brně"],"categ":["ostatní"],"color":["#CCCCCC"],"mista_celkem":[16],"dpth":[1],"child_ftes":[16],"nazev_show":["Zeměm. a kat. inspektorát v Brně<br />16 osob"],"value":[16],"color0":["#CCCCCC"],"title":["Zeměm. a kat. inspektorát v Brně<br />16 osob"]},"edges":{"from":[],"to":[]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false},"edges":{"arrows":"none","smooth":{"enabled":true,"type":"cubicBezier"}},"interaction":{"zoomView":true,"zoomSpeed":1},"layout":{"hierarchical":{"enabled":true,"levelSeparation":1500,"nodeSpacing":100,"parentCentralization":true,"direction":"LR","sortMethod":"directed","shakeTowards":"roots"}}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","highlight":{"enabled":true,"hoverNearest":false,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":true,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"},"tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-853c68b6fba123cf6294" style="width:100%;height:464px;" class="visNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-853c68b6fba123cf6294">{"x":{"nodes":{"id":["11001100"],"nazev":["Zeměm. a kat. inspektorát v Brně"],"mista_prac":[2],"mista_sluz":[14],"predstaveny":["true"],"id_ext":["79910000"],"urad_zkratka":["ZKI Brn"],"urad_nazev":["Zeměm. a kat. inspektorát v Brně"],"zkratka":["ZKI Brn"],"urad_skupina":["Katastr"],"label":["Zeměm. a kat. inspektorát v Brně"],"analyticky":[false],"nazev_lower":["zeměm. a kat. inspektorát v brně"],"categ":["ostatní"],"color":["#CCCCCC"],"mista_celkem":[16],"dpth":[1],"child_ftes":[16],"nazev_show":["Zeměm. a kat. inspektorát v Brně<br />16 osob"],"value":[16],"color0":["#CCCCCC"],"title":["Zeměm. a kat. inspektorát v Brně<br />16 osob"]},"edges":{"from":[],"to":[]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false},"edges":{"arrows":"none","smooth":{"enabled":true,"type":"cubicBezier"}},"interaction":{"zoomView":true,"zoomSpeed":1},"layout":{"hierarchical":{"enabled":true,"levelSeparation":1500,"nodeSpacing":100,"parentCentralization":true,"direction":"LR","sortMethod":"directed","shakeTowards":"roots"}}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","highlight":{"enabled":true,"hoverNearest":false,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":true,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"},"tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
@@ -197,7 +206,7 @@ Legenda označení útvarů
   "map": {
     "ostatní": ["1"]
   },
-  "group": ["SharedData8daa0f67"]
+  "group": ["SharedDataedf5bf66"]
 }</script>
 </div>
 </div>
@@ -205,8 +214,8 @@ Legenda označení útvarů
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="reactable html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-92cab39814870b83f3ee" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-92cab39814870b83f3ee">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"nazev":["Zeměm. a kat. inspektorát v Brně",null],"categ":["ostatní",null],"child_ftes":[16,"NA"],"dpth":[2,"NA"]},"columns":[{"id":"nazev","name":"Název útvaru","type":"character","minWidth":150},{"id":"categ","name":"Kategorie","type":"factor","minWidth":150},{"id":"child_ftes","name":"Počet míst","type":"numeric","filterable":false,"maxWidth":100},{"id":"dpth","name":"Úroveň řízení","type":"numeric","maxWidth":100}],"filterable":true,"showSortable":true,"crosstalkKey":["1","2"],"crosstalkGroup":"SharedData8daa0f67","dataKey":"383fcb12daecda15f5af1a704ab6cc55"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-727830c5f849237a4ea1" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-727830c5f849237a4ea1">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"nazev":["Zeměm. a kat. inspektorát v Brně",null],"categ":["ostatní",null],"child_ftes":[16,"NA"],"dpth":[2,"NA"]},"columns":[{"id":"nazev","name":"Název útvaru","type":"character","minWidth":150},{"id":"categ","name":"Kategorie","type":"factor","minWidth":150},{"id":"child_ftes","name":"Počet míst","type":"numeric","filterable":false,"maxWidth":100},{"id":"dpth","name":"Úroveň řízení","type":"numeric","maxWidth":100}],"filterable":true,"showSortable":true,"crosstalkKey":["1","2"],"crosstalkGroup":"SharedDataedf5bf66","dataKey":"383fcb12daecda15f5af1a704ab6cc55"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
@@ -226,7 +235,7 @@ Legenda označení útvarů
   "map": {
     "Ne": ["1"]
   },
-  "group": ["SharedDataba5a1b58"]
+  "group": ["SharedData839e14d6"]
 }</script>
 </div>
 </div>
@@ -234,8 +243,8 @@ Legenda označení útvarů
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="reactable html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-d34c858f232f9e71f8f3" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-d34c858f232f9e71f8f3">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"level1_nazev":["Zeměm. a kat. inspektorát v Brně"],"mista_celkem":[0],"is_analytical":["Ne"]},"columns":[{"id":"level1_nazev","name":"Úroveň 0","type":"character"},{"id":"mista_celkem","name":"Počet míst","type":"numeric","filterable":false},{"id":"is_analytical","name":"is_analytical","type":"character","show":false}],"filterable":true,"showSortable":true,"crosstalkKey":["1"],"crosstalkGroup":"SharedDataba5a1b58","dataKey":"6d2b42cb7d09dbe16fdd324e8f0ff4ac"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-e585df3825da0e2a2cab" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-e585df3825da0e2a2cab">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"level1_nazev":["Zeměm. a kat. inspektorát v Brně"],"mista_celkem":[0],"is_analytical":["Ne"]},"columns":[{"id":"level1_nazev","name":"Úroveň 0","type":"character"},{"id":"mista_celkem","name":"Počet míst","type":"numeric","filterable":false},{"id":"is_analytical","name":"is_analytical","type":"character","show":false}],"filterable":true,"showSortable":true,"crosstalkKey":["1"],"crosstalkGroup":"SharedData839e14d6","dataKey":"6d2b42cb7d09dbe16fdd324e8f0ff4ac"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>

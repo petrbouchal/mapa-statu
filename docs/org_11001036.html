@@ -66,21 +66,30 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Hledat"
   }
 }</script>
-<script src="site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<script src="site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
 <link href="site_libs/vis-9.1.0/vis-network.min.css" rel="stylesheet">
 <script src="site_libs/vis-9.1.0/vis-network.min.js"></script>
 <script src="site_libs/visNetwork-binding-2.1.2/visNetwork.js"></script>
 <script src="site_libs/jquery-3.5.1/jquery.min.js"></script>
-<link href="site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet">
-<script src="site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+<script src="site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
 <script src="site_libs/core-js-2.5.3/shim.min.js"></script>
-<script src="site_libs/react-17.0.0/react.min.js"></script>
-<script src="site_libs/react-17.0.0/react-dom.min.js"></script>
+<script src="site_libs/react-18.2.0/react.min.js"></script>
+<script src="site_libs/react-18.2.0/react-dom.min.js"></script>
 <script src="site_libs/reactwidget-1.0.0/react-tools.js"></script>
 <link href="site_libs/reactable-0.4.4/reactable.css" rel="stylesheet">
 <script src="site_libs/reactable-binding-0.4.4/reactable.js"></script>
 
 
+<meta property="og:title" content="Mapa státu: přehled veřejných institucí a jejich struktury">
+<meta property="og:description" content="Podívejte se na organizační struktury českých úřadů a analytické útvary v nich.">
+<meta property="og:image" content="/opengraph.png">
+<meta property="og:site_name" content="Mapa státu">
+<meta property="og:locale" content="cs_CZ">
+<meta name="twitter:title" content="Mapa státu: přehled veřejných institucí a jejich struktury">
+<meta name="twitter:description" content="Podívejte se na organizační struktury českých úřadů a analytické útvary v nich.">
+<meta name="twitter:image" content="/opengraph.png">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -102,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="./orgs.html"> 
-<span class="menu-text">Seznam institucí</span></a>
+<span class="menu-text">Všechny instituce</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./analytici.html"> 
@@ -165,14 +174,14 @@ Legenda označení útvarů
 <p>Počet lidí zobrazený při najetí na bod útvaru zahrnuje lidi pracující přímo v útvaru a všech jeho podřízených útvarech.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="visNetwork html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-7a80cb2267ad3bbd8a02" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-7a80cb2267ad3bbd8a02">{"x":{"nodes":{"id":["11001036","12003226","12003227","12003229","12003228"],"nazev":["KVV Ostrava","Velení","Operační oddělení","Oddělení obranných příprav","Oddělení logistiky"],"mista_prac":[0,0,9,3,7],"mista_sluz":[0,7,1,7,1],"predstaveny":[null,"true","true","true","true"],"id_ext":["70840000","70840001","70844001","70844003","70844002"],"urad_zkratka":["KVV Ost","KVV Ost","KVV Ost","KVV Ost","KVV Ost"],"urad_nazev":["KVV Ostrava","KVV Ostrava","KVV Ostrava","KVV Ostrava","KVV Ostrava"],"zkratka":["KVV Ost","Vel.","Oodd","OddOP","OddL"],"urad_skupina":["AČR: Krajská velitelství",null,null,null,null],"label":["KVV Ostrava","Velení","Operační oddělení","Oddělení obranných příprav","Oddělení logistiky"],"analyticky":[false,false,false,false,false],"nazev_lower":["kvv ostrava","velení","operační oddělení","oddělení obranných příprav","oddělení logistiky"],"categ":["ostatní","ostatní","ostatní","ostatní","ostatní"],"color":["#CCCCCC","#B3B3B3","#B3B3B3","#B3B3B3","#B3B3B3"],"mista_celkem":[0,7,10,10,8],"dpth":[1,2,2,2,2],"child_ftes":[35,7,10,10,8],"nazev_show":["KVV Ostrava<br />35 osob","Velení<br />7 osob","Operační oddělení<br />10 osob","Oddělení obranných příprav<br />10 osob","Oddělení logistiky<br />8 osob"],"value":[35,7,10,10,8],"color0":["#CCCCCC","#B3B3B3","#B3B3B3","#B3B3B3","#B3B3B3"],"title":["KVV Ostrava<br />35 osob","Velení<br />7 osob","Operační oddělení<br />10 osob","Oddělení obranných příprav<br />10 osob","Oddělení logistiky<br />8 osob"],"x":[-2.652149010473615e-05,-1,1,-0.1792517908420035,0.1761449355011302],"y":[-0.0002733768777634094,0.1787741142764763,-0.1793303419068468,-1,1]},"edges":{"from":["11001036","11001036","11001036","11001036"],"to":["12003226","12003227","12003229","12003228"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot","physics":false},"manipulation":{"enabled":false},"edges":{"arrows":"none","smooth":false},"interaction":{"zoomView":true,"zoomSpeed":1},"physics":{"stabilization":false}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","highlight":{"enabled":true,"hoverNearest":false,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":true,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"},"tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);","igraphlayout":{"type":"square"}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-562c67d9c36fab85b714" style="width:100%;height:464px;" class="visNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-562c67d9c36fab85b714">{"x":{"nodes":{"id":["11001036","12003226","12003227","12003229","12003228"],"nazev":["KVV Ostrava","Velení","Operační oddělení","Oddělení obranných příprav","Oddělení logistiky"],"mista_prac":[0,0,9,3,7],"mista_sluz":[0,7,1,7,1],"predstaveny":[null,"true","true","true","true"],"id_ext":["70840000","70840001","70844001","70844003","70844002"],"urad_zkratka":["KVV Ost","KVV Ost","KVV Ost","KVV Ost","KVV Ost"],"urad_nazev":["KVV Ostrava","KVV Ostrava","KVV Ostrava","KVV Ostrava","KVV Ostrava"],"zkratka":["KVV Ost","Vel.","Oodd","OddOP","OddL"],"urad_skupina":["AČR: Krajská velitelství",null,null,null,null],"label":["KVV Ostrava","Velení","Operační oddělení","Oddělení obranných příprav","Oddělení logistiky"],"analyticky":[false,false,false,false,false],"nazev_lower":["kvv ostrava","velení","operační oddělení","oddělení obranných příprav","oddělení logistiky"],"categ":["ostatní","ostatní","ostatní","ostatní","ostatní"],"color":["#CCCCCC","#B3B3B3","#B3B3B3","#B3B3B3","#B3B3B3"],"mista_celkem":[0,7,10,10,8],"dpth":[1,2,2,2,2],"child_ftes":[35,7,10,10,8],"nazev_show":["KVV Ostrava<br />35 osob","Velení<br />7 osob","Operační oddělení<br />10 osob","Oddělení obranných příprav<br />10 osob","Oddělení logistiky<br />8 osob"],"value":[35,7,10,10,8],"color0":["#CCCCCC","#B3B3B3","#B3B3B3","#B3B3B3","#B3B3B3"],"title":["KVV Ostrava<br />35 osob","Velení<br />7 osob","Operační oddělení<br />10 osob","Oddělení obranných příprav<br />10 osob","Oddělení logistiky<br />8 osob"],"x":[0.001924607709131276,1,-0.2844425056496469,-1,0.2830513661299898],"y":[0.00074581587932121,0.2849176281864747,1,-0.2845218654361498,-1]},"edges":{"from":["11001036","11001036","11001036","11001036"],"to":["12003226","12003227","12003229","12003228"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot","physics":false},"manipulation":{"enabled":false},"edges":{"arrows":"none","smooth":false},"interaction":{"zoomView":true,"zoomSpeed":1},"physics":{"stabilization":false}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","highlight":{"enabled":true,"hoverNearest":false,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":true,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"},"tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);","igraphlayout":{"type":"square"}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="visNetwork html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-960b2462db28fbe908ba" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-960b2462db28fbe908ba">{"x":{"nodes":{"id":["11001036","12003226","12003227","12003229","12003228"],"nazev":["KVV Ostrava","Velení","Operační oddělení","Oddělení obranných příprav","Oddělení logistiky"],"mista_prac":[0,0,9,3,7],"mista_sluz":[0,7,1,7,1],"predstaveny":[null,"true","true","true","true"],"id_ext":["70840000","70840001","70844001","70844003","70844002"],"urad_zkratka":["KVV Ost","KVV Ost","KVV Ost","KVV Ost","KVV Ost"],"urad_nazev":["KVV Ostrava","KVV Ostrava","KVV Ostrava","KVV Ostrava","KVV Ostrava"],"zkratka":["KVV Ost","Vel.","Oodd","OddOP","OddL"],"urad_skupina":["AČR: Krajská velitelství",null,null,null,null],"label":["KVV Ostrava","Velení","Operační oddělení","Oddělení obranných příprav","Oddělení logistiky"],"analyticky":[false,false,false,false,false],"nazev_lower":["kvv ostrava","velení","operační oddělení","oddělení obranných příprav","oddělení logistiky"],"categ":["ostatní","ostatní","ostatní","ostatní","ostatní"],"color":["#CCCCCC","#B3B3B3","#B3B3B3","#B3B3B3","#B3B3B3"],"mista_celkem":[0,7,10,10,8],"dpth":[1,2,2,2,2],"child_ftes":[35,7,10,10,8],"nazev_show":["KVV Ostrava<br />35 osob","Velení<br />7 osob","Operační oddělení<br />10 osob","Oddělení obranných příprav<br />10 osob","Oddělení logistiky<br />8 osob"],"value":[35,7,10,10,8],"color0":["#CCCCCC","#B3B3B3","#B3B3B3","#B3B3B3","#B3B3B3"],"title":["KVV Ostrava<br />35 osob","Velení<br />7 osob","Operační oddělení<br />10 osob","Oddělení obranných příprav<br />10 osob","Oddělení logistiky<br />8 osob"]},"edges":{"from":["11001036","11001036","11001036","11001036"],"to":["12003226","12003227","12003229","12003228"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false},"edges":{"arrows":"none","smooth":{"enabled":true,"type":"cubicBezier"}},"interaction":{"zoomView":true,"zoomSpeed":1},"layout":{"hierarchical":{"enabled":true,"levelSeparation":1500,"nodeSpacing":100,"parentCentralization":true,"direction":"LR","sortMethod":"directed","shakeTowards":"roots"}}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","highlight":{"enabled":true,"hoverNearest":false,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":true,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"},"tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-7fd75fff00d42c043f1d" style="width:100%;height:464px;" class="visNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-7fd75fff00d42c043f1d">{"x":{"nodes":{"id":["11001036","12003226","12003227","12003229","12003228"],"nazev":["KVV Ostrava","Velení","Operační oddělení","Oddělení obranných příprav","Oddělení logistiky"],"mista_prac":[0,0,9,3,7],"mista_sluz":[0,7,1,7,1],"predstaveny":[null,"true","true","true","true"],"id_ext":["70840000","70840001","70844001","70844003","70844002"],"urad_zkratka":["KVV Ost","KVV Ost","KVV Ost","KVV Ost","KVV Ost"],"urad_nazev":["KVV Ostrava","KVV Ostrava","KVV Ostrava","KVV Ostrava","KVV Ostrava"],"zkratka":["KVV Ost","Vel.","Oodd","OddOP","OddL"],"urad_skupina":["AČR: Krajská velitelství",null,null,null,null],"label":["KVV Ostrava","Velení","Operační oddělení","Oddělení obranných příprav","Oddělení logistiky"],"analyticky":[false,false,false,false,false],"nazev_lower":["kvv ostrava","velení","operační oddělení","oddělení obranných příprav","oddělení logistiky"],"categ":["ostatní","ostatní","ostatní","ostatní","ostatní"],"color":["#CCCCCC","#B3B3B3","#B3B3B3","#B3B3B3","#B3B3B3"],"mista_celkem":[0,7,10,10,8],"dpth":[1,2,2,2,2],"child_ftes":[35,7,10,10,8],"nazev_show":["KVV Ostrava<br />35 osob","Velení<br />7 osob","Operační oddělení<br />10 osob","Oddělení obranných příprav<br />10 osob","Oddělení logistiky<br />8 osob"],"value":[35,7,10,10,8],"color0":["#CCCCCC","#B3B3B3","#B3B3B3","#B3B3B3","#B3B3B3"],"title":["KVV Ostrava<br />35 osob","Velení<br />7 osob","Operační oddělení<br />10 osob","Oddělení obranných příprav<br />10 osob","Oddělení logistiky<br />8 osob"]},"edges":{"from":["11001036","11001036","11001036","11001036"],"to":["12003226","12003227","12003229","12003228"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false},"edges":{"arrows":"none","smooth":{"enabled":true,"type":"cubicBezier"}},"interaction":{"zoomView":true,"zoomSpeed":1},"layout":{"hierarchical":{"enabled":true,"levelSeparation":1500,"nodeSpacing":100,"parentCentralization":true,"direction":"LR","sortMethod":"directed","shakeTowards":"roots"}}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","highlight":{"enabled":true,"hoverNearest":false,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":true,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"},"tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
@@ -197,7 +206,7 @@ Legenda označení útvarů
   "map": {
     "ostatní": ["1", "2", "3", "4", "5"]
   },
-  "group": ["SharedData7a80cb22"]
+  "group": ["SharedData562c67d9"]
 }</script>
 </div>
 </div>
@@ -205,8 +214,8 @@ Legenda označení útvarů
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="reactable html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-044923d66426aeb0988e" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-044923d66426aeb0988e">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"nazev":["KVV Ostrava","Velení","Operační oddělení","Oddělení obranných příprav","Oddělení logistiky",null],"categ":["ostatní","ostatní","ostatní","ostatní","ostatní",null],"child_ftes":[35,7,10,10,8,"NA"],"dpth":[2,3,3,3,3,"NA"]},"columns":[{"id":"nazev","name":"Název útvaru","type":"character","minWidth":150},{"id":"categ","name":"Kategorie","type":"factor","minWidth":150},{"id":"child_ftes","name":"Počet míst","type":"numeric","filterable":false,"maxWidth":100},{"id":"dpth","name":"Úroveň řízení","type":"numeric","maxWidth":100}],"filterable":true,"showSortable":true,"crosstalkKey":["1","2","3","4","5","6"],"crosstalkGroup":"SharedData7a80cb22","dataKey":"825c771584fd33fb54ab8aeff7cec700"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-a5216516a50bd2c9044f" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-a5216516a50bd2c9044f">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"nazev":["KVV Ostrava","Velení","Operační oddělení","Oddělení obranných příprav","Oddělení logistiky",null],"categ":["ostatní","ostatní","ostatní","ostatní","ostatní",null],"child_ftes":[35,7,10,10,8,"NA"],"dpth":[2,3,3,3,3,"NA"]},"columns":[{"id":"nazev","name":"Název útvaru","type":"character","minWidth":150},{"id":"categ","name":"Kategorie","type":"factor","minWidth":150},{"id":"child_ftes","name":"Počet míst","type":"numeric","filterable":false,"maxWidth":100},{"id":"dpth","name":"Úroveň řízení","type":"numeric","maxWidth":100}],"filterable":true,"showSortable":true,"crosstalkKey":["1","2","3","4","5","6"],"crosstalkGroup":"SharedData562c67d9","dataKey":"825c771584fd33fb54ab8aeff7cec700"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
@@ -226,7 +235,7 @@ Legenda označení útvarů
   "map": {
     "Ne": ["1", "2", "3", "4"]
   },
-  "group": ["SharedData67ad3bbd"]
+  "group": ["SharedDatac36fab85"]
 }</script>
 </div>
 </div>
@@ -234,8 +243,8 @@ Legenda označení útvarů
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="reactable html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-ad7f677665c582d6d098" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-ad7f677665c582d6d098">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"level1_nazev":["KVV Ostrava","KVV Ostrava","KVV Ostrava","KVV Ostrava"],"level2_nazev":["Velení","Operační oddělení","Oddělení obranných příprav","Oddělení logistiky"],"mista_celkem":[7,10,10,8],"is_analytical":["Ne","Ne","Ne","Ne"]},"columns":[{"id":"level1_nazev","name":"Úroveň 0","type":"character"},{"id":"level2_nazev","name":"Úroveň 1","type":"character"},{"id":"mista_celkem","name":"Počet míst","type":"numeric","filterable":false},{"id":"is_analytical","name":"is_analytical","type":"character","show":false}],"filterable":true,"showSortable":true,"crosstalkKey":["1","2","3","4"],"crosstalkGroup":"SharedData67ad3bbd","dataKey":"bbea1e926df0ceaf7312ade3d2f7d79f"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-b692c2aaf50836b694af" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-b692c2aaf50836b694af">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"level1_nazev":["KVV Ostrava","KVV Ostrava","KVV Ostrava","KVV Ostrava"],"level2_nazev":["Velení","Operační oddělení","Oddělení obranných příprav","Oddělení logistiky"],"mista_celkem":[7,10,10,8],"is_analytical":["Ne","Ne","Ne","Ne"]},"columns":[{"id":"level1_nazev","name":"Úroveň 0","type":"character"},{"id":"level2_nazev","name":"Úroveň 1","type":"character"},{"id":"mista_celkem","name":"Počet míst","type":"numeric","filterable":false},{"id":"is_analytical","name":"is_analytical","type":"character","show":false}],"filterable":true,"showSortable":true,"crosstalkKey":["1","2","3","4"],"crosstalkGroup":"SharedDatac36fab85","dataKey":"bbea1e926df0ceaf7312ade3d2f7d79f"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>

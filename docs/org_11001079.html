@@ -66,21 +66,30 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Hledat"
   }
 }</script>
-<script src="site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<script src="site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
 <link href="site_libs/vis-9.1.0/vis-network.min.css" rel="stylesheet">
 <script src="site_libs/vis-9.1.0/vis-network.min.js"></script>
 <script src="site_libs/visNetwork-binding-2.1.2/visNetwork.js"></script>
 <script src="site_libs/jquery-3.5.1/jquery.min.js"></script>
-<link href="site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet">
-<script src="site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+<script src="site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
 <script src="site_libs/core-js-2.5.3/shim.min.js"></script>
-<script src="site_libs/react-17.0.0/react.min.js"></script>
-<script src="site_libs/react-17.0.0/react-dom.min.js"></script>
+<script src="site_libs/react-18.2.0/react.min.js"></script>
+<script src="site_libs/react-18.2.0/react-dom.min.js"></script>
 <script src="site_libs/reactwidget-1.0.0/react-tools.js"></script>
 <link href="site_libs/reactable-0.4.4/reactable.css" rel="stylesheet">
 <script src="site_libs/reactable-binding-0.4.4/reactable.js"></script>
 
 
+<meta property="og:title" content="Mapa státu: přehled veřejných institucí a jejich struktury">
+<meta property="og:description" content="Podívejte se na organizační struktury českých úřadů a analytické útvary v nich.">
+<meta property="og:image" content="/opengraph.png">
+<meta property="og:site_name" content="Mapa státu">
+<meta property="og:locale" content="cs_CZ">
+<meta name="twitter:title" content="Mapa státu: přehled veřejných institucí a jejich struktury">
+<meta name="twitter:description" content="Podívejte se na organizační struktury českých úřadů a analytické útvary v nich.">
+<meta name="twitter:image" content="/opengraph.png">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -102,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="./orgs.html"> 
-<span class="menu-text">Seznam institucí</span></a>
+<span class="menu-text">Všechny instituce</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./analytici.html"> 
@@ -165,14 +174,14 @@ Legenda označení útvarů
 <p>Počet lidí zobrazený při najetí na bod útvaru zahrnuje lidi pracující přímo v útvaru a všech jeho podřízených útvarech.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="visNetwork html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-36723a0bcf10a81b3952" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-36723a0bcf10a81b3952">{"x":{"nodes":{"id":["11001079","12012833"],"nazev":["OBÚ pro území krajů KH, PCE, LB a VYS","Oddělení Liberec"],"mista_prac":[4,2],"mista_sluz":[7,4],"predstaveny":["true","true"],"id_ext":["6156380","9174728"],"urad_zkratka":["OBÚ KHPCLBVS","OBÚ KHPCLBVS"],"urad_nazev":["OBÚ pro území krajů KH, PCE, LB a VYS","OBÚ pro území krajů KH, PCE, LB a VYS"],"zkratka":["OBÚ KHPCLBVS","Oddělení Lib"],"urad_skupina":["Báňské úřady",null],"label":["OBÚ pro území krajů KH, PCE, LB a VYS","Oddělení Liberec"],"analyticky":[false,false],"nazev_lower":["obú pro území krajů kh, pce, lb a vys","oddělení liberec"],"categ":["ostatní","ostatní"],"color":["#CCCCCC","#B3B3B3"],"mista_celkem":[11,6],"dpth":[1,2],"child_ftes":[17,6],"nazev_show":["OBÚ pro území krajů KH, PCE, LB a VYS<br />17 osob","Oddělení Liberec<br />6 osob"],"value":[17,6],"color0":["#CCCCCC","#B3B3B3"],"title":["OBÚ pro území krajů KH, PCE, LB a VYS<br />17 osob","Oddělení Liberec<br />6 osob"],"x":[1,-1],"y":[1,-1]},"edges":{"from":["11001079"],"to":["12012833"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot","physics":false},"manipulation":{"enabled":false},"edges":{"arrows":"none","smooth":false},"interaction":{"zoomView":true,"zoomSpeed":1},"physics":{"stabilization":false}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","highlight":{"enabled":true,"hoverNearest":false,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":true,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"},"tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);","igraphlayout":{"type":"square"}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-e6f7fea697fee473c250" style="width:100%;height:464px;" class="visNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e6f7fea697fee473c250">{"x":{"nodes":{"id":["11001079","12012833"],"nazev":["OBÚ pro území krajů KH, PCE, LB a VYS","Oddělení Liberec"],"mista_prac":[4,2],"mista_sluz":[7,4],"predstaveny":["true","true"],"id_ext":["6156380","9174728"],"urad_zkratka":["OBÚ KHPCLBVS","OBÚ KHPCLBVS"],"urad_nazev":["OBÚ pro území krajů KH, PCE, LB a VYS","OBÚ pro území krajů KH, PCE, LB a VYS"],"zkratka":["OBÚ KHPCLBVS","Oddělení Lib"],"urad_skupina":["Báňské úřady",null],"label":["OBÚ pro území krajů KH, PCE, LB a VYS","Oddělení Liberec"],"analyticky":[false,false],"nazev_lower":["obú pro území krajů kh, pce, lb a vys","oddělení liberec"],"categ":["ostatní","ostatní"],"color":["#CCCCCC","#B3B3B3"],"mista_celkem":[11,6],"dpth":[1,2],"child_ftes":[17,6],"nazev_show":["OBÚ pro území krajů KH, PCE, LB a VYS<br />17 osob","Oddělení Liberec<br />6 osob"],"value":[17,6],"color0":["#CCCCCC","#B3B3B3"],"title":["OBÚ pro území krajů KH, PCE, LB a VYS<br />17 osob","Oddělení Liberec<br />6 osob"],"x":[1,-1],"y":[1,-1]},"edges":{"from":["11001079"],"to":["12012833"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot","physics":false},"manipulation":{"enabled":false},"edges":{"arrows":"none","smooth":false},"interaction":{"zoomView":true,"zoomSpeed":1},"physics":{"stabilization":false}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","highlight":{"enabled":true,"hoverNearest":false,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":true,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"},"tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);","igraphlayout":{"type":"square"}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="visNetwork html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-229048125dcd82415fa9" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-229048125dcd82415fa9">{"x":{"nodes":{"id":["11001079","12012833"],"nazev":["OBÚ pro území krajů KH, PCE, LB a VYS","Oddělení Liberec"],"mista_prac":[4,2],"mista_sluz":[7,4],"predstaveny":["true","true"],"id_ext":["6156380","9174728"],"urad_zkratka":["OBÚ KHPCLBVS","OBÚ KHPCLBVS"],"urad_nazev":["OBÚ pro území krajů KH, PCE, LB a VYS","OBÚ pro území krajů KH, PCE, LB a VYS"],"zkratka":["OBÚ KHPCLBVS","Oddělení Lib"],"urad_skupina":["Báňské úřady",null],"label":["OBÚ pro území krajů KH, PCE, LB a VYS","Oddělení Liberec"],"analyticky":[false,false],"nazev_lower":["obú pro území krajů kh, pce, lb a vys","oddělení liberec"],"categ":["ostatní","ostatní"],"color":["#CCCCCC","#B3B3B3"],"mista_celkem":[11,6],"dpth":[1,2],"child_ftes":[17,6],"nazev_show":["OBÚ pro území krajů KH, PCE, LB a VYS<br />17 osob","Oddělení Liberec<br />6 osob"],"value":[17,6],"color0":["#CCCCCC","#B3B3B3"],"title":["OBÚ pro území krajů KH, PCE, LB a VYS<br />17 osob","Oddělení Liberec<br />6 osob"]},"edges":{"from":["11001079"],"to":["12012833"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false},"edges":{"arrows":"none","smooth":{"enabled":true,"type":"cubicBezier"}},"interaction":{"zoomView":true,"zoomSpeed":1},"layout":{"hierarchical":{"enabled":true,"levelSeparation":1500,"nodeSpacing":100,"parentCentralization":true,"direction":"LR","sortMethod":"directed","shakeTowards":"roots"}}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","highlight":{"enabled":true,"hoverNearest":false,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":true,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"},"tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-a64945d8122ad12685fd" style="width:100%;height:464px;" class="visNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a64945d8122ad12685fd">{"x":{"nodes":{"id":["11001079","12012833"],"nazev":["OBÚ pro území krajů KH, PCE, LB a VYS","Oddělení Liberec"],"mista_prac":[4,2],"mista_sluz":[7,4],"predstaveny":["true","true"],"id_ext":["6156380","9174728"],"urad_zkratka":["OBÚ KHPCLBVS","OBÚ KHPCLBVS"],"urad_nazev":["OBÚ pro území krajů KH, PCE, LB a VYS","OBÚ pro území krajů KH, PCE, LB a VYS"],"zkratka":["OBÚ KHPCLBVS","Oddělení Lib"],"urad_skupina":["Báňské úřady",null],"label":["OBÚ pro území krajů KH, PCE, LB a VYS","Oddělení Liberec"],"analyticky":[false,false],"nazev_lower":["obú pro území krajů kh, pce, lb a vys","oddělení liberec"],"categ":["ostatní","ostatní"],"color":["#CCCCCC","#B3B3B3"],"mista_celkem":[11,6],"dpth":[1,2],"child_ftes":[17,6],"nazev_show":["OBÚ pro území krajů KH, PCE, LB a VYS<br />17 osob","Oddělení Liberec<br />6 osob"],"value":[17,6],"color0":["#CCCCCC","#B3B3B3"],"title":["OBÚ pro území krajů KH, PCE, LB a VYS<br />17 osob","Oddělení Liberec<br />6 osob"]},"edges":{"from":["11001079"],"to":["12012833"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false},"edges":{"arrows":"none","smooth":{"enabled":true,"type":"cubicBezier"}},"interaction":{"zoomView":true,"zoomSpeed":1},"layout":{"hierarchical":{"enabled":true,"levelSeparation":1500,"nodeSpacing":100,"parentCentralization":true,"direction":"LR","sortMethod":"directed","shakeTowards":"roots"}}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","highlight":{"enabled":true,"hoverNearest":false,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":true,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"},"tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
@@ -197,7 +206,7 @@ Legenda označení útvarů
   "map": {
     "ostatní": ["1", "2"]
   },
-  "group": ["SharedData36723a0b"]
+  "group": ["SharedDatae6f7fea6"]
 }</script>
 </div>
 </div>
@@ -205,8 +214,8 @@ Legenda označení útvarů
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="reactable html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-0d74836df338e0b3786c" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-0d74836df338e0b3786c">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"nazev":["OBÚ pro území krajů KH, PCE, LB a VYS","Oddělení Liberec",null],"categ":["ostatní","ostatní",null],"child_ftes":[17,6,"NA"],"dpth":[2,3,"NA"]},"columns":[{"id":"nazev","name":"Název útvaru","type":"character","minWidth":150},{"id":"categ","name":"Kategorie","type":"factor","minWidth":150},{"id":"child_ftes","name":"Počet míst","type":"numeric","filterable":false,"maxWidth":100},{"id":"dpth","name":"Úroveň řízení","type":"numeric","maxWidth":100}],"filterable":true,"showSortable":true,"crosstalkKey":["1","2","3"],"crosstalkGroup":"SharedData36723a0b","dataKey":"8ca8f6287baa260b20c40f6a3061a0b8"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-20a2d3fefb6d586b0c61" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-20a2d3fefb6d586b0c61">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"nazev":["OBÚ pro území krajů KH, PCE, LB a VYS","Oddělení Liberec",null],"categ":["ostatní","ostatní",null],"child_ftes":[17,6,"NA"],"dpth":[2,3,"NA"]},"columns":[{"id":"nazev","name":"Název útvaru","type":"character","minWidth":150},{"id":"categ","name":"Kategorie","type":"factor","minWidth":150},{"id":"child_ftes","name":"Počet míst","type":"numeric","filterable":false,"maxWidth":100},{"id":"dpth","name":"Úroveň řízení","type":"numeric","maxWidth":100}],"filterable":true,"showSortable":true,"crosstalkKey":["1","2","3"],"crosstalkGroup":"SharedDatae6f7fea6","dataKey":"8ca8f6287baa260b20c40f6a3061a0b8"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
@@ -226,7 +235,7 @@ Legenda označení útvarů
   "map": {
     "Ne": ["1"]
   },
-  "group": ["SharedDatacf10a81b"]
+  "group": ["SharedData97fee473"]
 }</script>
 </div>
 </div>
@@ -234,8 +243,8 @@ Legenda označení útvarů
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="reactable html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-e98ada9faebcfe2ba208" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-e98ada9faebcfe2ba208">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"level1_nazev":["OBÚ pro území krajů KH, PCE, LB a VYS"],"level2_nazev":["Oddělení Liberec"],"mista_celkem":[6],"is_analytical":["Ne"]},"columns":[{"id":"level1_nazev","name":"Úroveň 0","type":"character"},{"id":"level2_nazev","name":"Úroveň 1","type":"character"},{"id":"mista_celkem","name":"Počet míst","type":"numeric","filterable":false},{"id":"is_analytical","name":"is_analytical","type":"character","show":false}],"filterable":true,"showSortable":true,"crosstalkKey":["1"],"crosstalkGroup":"SharedDatacf10a81b","dataKey":"0a7a5b02ad11813185b4e4a29cb7a58e"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-c6a904b26c28d54f64ca" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-c6a904b26c28d54f64ca">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"level1_nazev":["OBÚ pro území krajů KH, PCE, LB a VYS"],"level2_nazev":["Oddělení Liberec"],"mista_celkem":[6],"is_analytical":["Ne"]},"columns":[{"id":"level1_nazev","name":"Úroveň 0","type":"character"},{"id":"level2_nazev","name":"Úroveň 1","type":"character"},{"id":"mista_celkem","name":"Počet míst","type":"numeric","filterable":false},{"id":"is_analytical","name":"is_analytical","type":"character","show":false}],"filterable":true,"showSortable":true,"crosstalkKey":["1"],"crosstalkGroup":"SharedData97fee473","dataKey":"0a7a5b02ad11813185b4e4a29cb7a58e"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>

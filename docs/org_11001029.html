@@ -66,21 +66,30 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Hledat"
   }
 }</script>
-<script src="site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<script src="site_libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
 <link href="site_libs/vis-9.1.0/vis-network.min.css" rel="stylesheet">
 <script src="site_libs/vis-9.1.0/vis-network.min.js"></script>
 <script src="site_libs/visNetwork-binding-2.1.2/visNetwork.js"></script>
 <script src="site_libs/jquery-3.5.1/jquery.min.js"></script>
-<link href="site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet">
-<script src="site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+<script src="site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
 <script src="site_libs/core-js-2.5.3/shim.min.js"></script>
-<script src="site_libs/react-17.0.0/react.min.js"></script>
-<script src="site_libs/react-17.0.0/react-dom.min.js"></script>
+<script src="site_libs/react-18.2.0/react.min.js"></script>
+<script src="site_libs/react-18.2.0/react-dom.min.js"></script>
 <script src="site_libs/reactwidget-1.0.0/react-tools.js"></script>
 <link href="site_libs/reactable-0.4.4/reactable.css" rel="stylesheet">
 <script src="site_libs/reactable-binding-0.4.4/reactable.js"></script>
 
 
+<meta property="og:title" content="Mapa státu: přehled veřejných institucí a jejich struktury">
+<meta property="og:description" content="Podívejte se na organizační struktury českých úřadů a analytické útvary v nich.">
+<meta property="og:image" content="/opengraph.png">
+<meta property="og:site_name" content="Mapa státu">
+<meta property="og:locale" content="cs_CZ">
+<meta name="twitter:title" content="Mapa státu: přehled veřejných institucí a jejich struktury">
+<meta name="twitter:description" content="Podívejte se na organizační struktury českých úřadů a analytické útvary v nich.">
+<meta name="twitter:image" content="/opengraph.png">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -102,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="./orgs.html"> 
-<span class="menu-text">Seznam institucí</span></a>
+<span class="menu-text">Všechny instituce</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./analytici.html"> 
@@ -165,14 +174,14 @@ Legenda označení útvarů
 <p>Počet lidí zobrazený při najetí na bod útvaru zahrnuje lidi pracující přímo v útvaru a všech jeho podřízených útvarech.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="visNetwork html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-5f5a0b2f5b86016483fa" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-5f5a0b2f5b86016483fa">{"x":{"nodes":{"id":["11001029","12003219","12003220","12003232","12003231"],"nazev":["KVV Karlovy Vary","Velení","Operační oddělení","Oddělení obranných příprav","Oddělení logistiky"],"mista_prac":[0,0,9,3,7],"mista_sluz":[0,7,1,6,1],"predstaveny":[null,"true","true","true","true"],"id_ext":["50300000","50300001","50304001","50304003","50304002"],"urad_zkratka":["KVV KV","KVV KV","KVV KV","KVV KV","KVV KV"],"urad_nazev":["KVV Karlovy Vary","KVV Karlovy Vary","KVV Karlovy Vary","KVV Karlovy Vary","KVV Karlovy Vary"],"zkratka":["KVV KV","Vel.","Oodd","OddOP","OddL"],"urad_skupina":["AČR: Krajská velitelství",null,null,null,null],"label":["KVV Karlovy Vary","Velení","Operační oddělení","Oddělení obranných příprav","Oddělení logistiky"],"analyticky":[false,false,false,false,false],"nazev_lower":["kvv karlovy vary","velení","operační oddělení","oddělení obranných příprav","oddělení logistiky"],"categ":["ostatní","ostatní","ostatní","ostatní","ostatní"],"color":["#CCCCCC","#B3B3B3","#B3B3B3","#B3B3B3","#B3B3B3"],"mista_celkem":[0,7,10,9,8],"dpth":[1,2,2,2,2],"child_ftes":[34,7,10,9,8],"nazev_show":["KVV Karlovy Vary<br />34 osob","Velení<br />7 osob","Operační oddělení<br />10 osob","Oddělení obranných příprav<br />9 osob","Oddělení logistiky<br />8 osob"],"value":[34,7,10,9,8],"color0":["#CCCCCC","#B3B3B3","#B3B3B3","#B3B3B3","#B3B3B3"],"title":["KVV Karlovy Vary<br />34 osob","Velení<br />7 osob","Operační oddělení<br />10 osob","Oddělení obranných příprav<br />9 osob","Oddělení logistiky<br />8 osob"],"x":[-0.0005498359001416819,-0.1455372824999378,1,-1,0.1421287679562802],"y":[-0.0002842239103418853,-1,-0.1417457505699677,0.1408704558105995,1]},"edges":{"from":["11001029","11001029","11001029","11001029"],"to":["12003219","12003220","12003232","12003231"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot","physics":false},"manipulation":{"enabled":false},"edges":{"arrows":"none","smooth":false},"interaction":{"zoomView":true,"zoomSpeed":1},"physics":{"stabilization":false}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","highlight":{"enabled":true,"hoverNearest":false,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":true,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"},"tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);","igraphlayout":{"type":"square"}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-ab25d38defadfb2ddcf1" style="width:100%;height:464px;" class="visNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ab25d38defadfb2ddcf1">{"x":{"nodes":{"id":["11001029","12003219","12003220","12003232","12003231"],"nazev":["KVV Karlovy Vary","Velení","Operační oddělení","Oddělení obranných příprav","Oddělení logistiky"],"mista_prac":[0,0,9,3,7],"mista_sluz":[0,7,1,6,1],"predstaveny":[null,"true","true","true","true"],"id_ext":["50300000","50300001","50304001","50304003","50304002"],"urad_zkratka":["KVV KV","KVV KV","KVV KV","KVV KV","KVV KV"],"urad_nazev":["KVV Karlovy Vary","KVV Karlovy Vary","KVV Karlovy Vary","KVV Karlovy Vary","KVV Karlovy Vary"],"zkratka":["KVV KV","Vel.","Oodd","OddOP","OddL"],"urad_skupina":["AČR: Krajská velitelství",null,null,null,null],"label":["KVV Karlovy Vary","Velení","Operační oddělení","Oddělení obranných příprav","Oddělení logistiky"],"analyticky":[false,false,false,false,false],"nazev_lower":["kvv karlovy vary","velení","operační oddělení","oddělení obranných příprav","oddělení logistiky"],"categ":["ostatní","ostatní","ostatní","ostatní","ostatní"],"color":["#CCCCCC","#B3B3B3","#B3B3B3","#B3B3B3","#B3B3B3"],"mista_celkem":[0,7,10,9,8],"dpth":[1,2,2,2,2],"child_ftes":[34,7,10,9,8],"nazev_show":["KVV Karlovy Vary<br />34 osob","Velení<br />7 osob","Operační oddělení<br />10 osob","Oddělení obranných příprav<br />9 osob","Oddělení logistiky<br />8 osob"],"value":[34,7,10,9,8],"color0":["#CCCCCC","#B3B3B3","#B3B3B3","#B3B3B3","#B3B3B3"],"title":["KVV Karlovy Vary<br />34 osob","Velení<br />7 osob","Operační oddělení<br />10 osob","Oddělení obranných příprav<br />9 osob","Oddělení logistiky<br />8 osob"],"x":[-8.986836722602032e-05,1,-0.04599370136851533,0.04600119914525846,-1],"y":[0.002035373643525906,0.04573674468551348,1,-1,-0.04557422867906902]},"edges":{"from":["11001029","11001029","11001029","11001029"],"to":["12003219","12003220","12003232","12003231"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot","physics":false},"manipulation":{"enabled":false},"edges":{"arrows":"none","smooth":false},"interaction":{"zoomView":true,"zoomSpeed":1},"physics":{"stabilization":false}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","highlight":{"enabled":true,"hoverNearest":false,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":true,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"},"tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);","igraphlayout":{"type":"square"}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="visNetwork html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-1948db9ec405c779a451" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-1948db9ec405c779a451">{"x":{"nodes":{"id":["11001029","12003219","12003220","12003232","12003231"],"nazev":["KVV Karlovy Vary","Velení","Operační oddělení","Oddělení obranných příprav","Oddělení logistiky"],"mista_prac":[0,0,9,3,7],"mista_sluz":[0,7,1,6,1],"predstaveny":[null,"true","true","true","true"],"id_ext":["50300000","50300001","50304001","50304003","50304002"],"urad_zkratka":["KVV KV","KVV KV","KVV KV","KVV KV","KVV KV"],"urad_nazev":["KVV Karlovy Vary","KVV Karlovy Vary","KVV Karlovy Vary","KVV Karlovy Vary","KVV Karlovy Vary"],"zkratka":["KVV KV","Vel.","Oodd","OddOP","OddL"],"urad_skupina":["AČR: Krajská velitelství",null,null,null,null],"label":["KVV Karlovy Vary","Velení","Operační oddělení","Oddělení obranných příprav","Oddělení logistiky"],"analyticky":[false,false,false,false,false],"nazev_lower":["kvv karlovy vary","velení","operační oddělení","oddělení obranných příprav","oddělení logistiky"],"categ":["ostatní","ostatní","ostatní","ostatní","ostatní"],"color":["#CCCCCC","#B3B3B3","#B3B3B3","#B3B3B3","#B3B3B3"],"mista_celkem":[0,7,10,9,8],"dpth":[1,2,2,2,2],"child_ftes":[34,7,10,9,8],"nazev_show":["KVV Karlovy Vary<br />34 osob","Velení<br />7 osob","Operační oddělení<br />10 osob","Oddělení obranných příprav<br />9 osob","Oddělení logistiky<br />8 osob"],"value":[34,7,10,9,8],"color0":["#CCCCCC","#B3B3B3","#B3B3B3","#B3B3B3","#B3B3B3"],"title":["KVV Karlovy Vary<br />34 osob","Velení<br />7 osob","Operační oddělení<br />10 osob","Oddělení obranných příprav<br />9 osob","Oddělení logistiky<br />8 osob"]},"edges":{"from":["11001029","11001029","11001029","11001029"],"to":["12003219","12003220","12003232","12003231"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false},"edges":{"arrows":"none","smooth":{"enabled":true,"type":"cubicBezier"}},"interaction":{"zoomView":true,"zoomSpeed":1},"layout":{"hierarchical":{"enabled":true,"levelSeparation":1500,"nodeSpacing":100,"parentCentralization":true,"direction":"LR","sortMethod":"directed","shakeTowards":"roots"}}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","highlight":{"enabled":true,"hoverNearest":false,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":true,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"},"tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-6be2f3eef1e2cfa276d7" style="width:100%;height:464px;" class="visNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6be2f3eef1e2cfa276d7">{"x":{"nodes":{"id":["11001029","12003219","12003220","12003232","12003231"],"nazev":["KVV Karlovy Vary","Velení","Operační oddělení","Oddělení obranných příprav","Oddělení logistiky"],"mista_prac":[0,0,9,3,7],"mista_sluz":[0,7,1,6,1],"predstaveny":[null,"true","true","true","true"],"id_ext":["50300000","50300001","50304001","50304003","50304002"],"urad_zkratka":["KVV KV","KVV KV","KVV KV","KVV KV","KVV KV"],"urad_nazev":["KVV Karlovy Vary","KVV Karlovy Vary","KVV Karlovy Vary","KVV Karlovy Vary","KVV Karlovy Vary"],"zkratka":["KVV KV","Vel.","Oodd","OddOP","OddL"],"urad_skupina":["AČR: Krajská velitelství",null,null,null,null],"label":["KVV Karlovy Vary","Velení","Operační oddělení","Oddělení obranných příprav","Oddělení logistiky"],"analyticky":[false,false,false,false,false],"nazev_lower":["kvv karlovy vary","velení","operační oddělení","oddělení obranných příprav","oddělení logistiky"],"categ":["ostatní","ostatní","ostatní","ostatní","ostatní"],"color":["#CCCCCC","#B3B3B3","#B3B3B3","#B3B3B3","#B3B3B3"],"mista_celkem":[0,7,10,9,8],"dpth":[1,2,2,2,2],"child_ftes":[34,7,10,9,8],"nazev_show":["KVV Karlovy Vary<br />34 osob","Velení<br />7 osob","Operační oddělení<br />10 osob","Oddělení obranných příprav<br />9 osob","Oddělení logistiky<br />8 osob"],"value":[34,7,10,9,8],"color0":["#CCCCCC","#B3B3B3","#B3B3B3","#B3B3B3","#B3B3B3"],"title":["KVV Karlovy Vary<br />34 osob","Velení<br />7 osob","Operační oddělení<br />10 osob","Oddělení obranných příprav<br />9 osob","Oddělení logistiky<br />8 osob"]},"edges":{"from":["11001029","11001029","11001029","11001029"],"to":["12003219","12003220","12003232","12003231"]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot"},"manipulation":{"enabled":false},"edges":{"arrows":"none","smooth":{"enabled":true,"type":"cubicBezier"}},"interaction":{"zoomView":true,"zoomSpeed":1},"layout":{"hierarchical":{"enabled":true,"levelSeparation":1500,"nodeSpacing":100,"parentCentralization":true,"direction":"LR","sortMethod":"directed","shakeTowards":"roots"}}},"groups":null,"width":null,"height":null,"idselection":{"enabled":false,"style":"width: 150px; height: 26px","useLabels":true,"main":"Select by id"},"byselection":{"enabled":false,"style":"width: 150px; height: 26px","multiple":false,"hideColor":"rgba(200,200,200,0.5)","highlight":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","highlight":{"enabled":true,"hoverNearest":false,"degree":1,"algorithm":"all","hideColor":"rgba(200,200,200,0.5)","labelOnly":true},"collapse":{"enabled":true,"fit":false,"resetHighlight":true,"clusterOptions":null,"keepCoord":true,"labelSuffix":"(cluster)"},"tooltipStay":300,"tooltipStyle":"position: fixed;visibility:hidden;padding: 5px;white-space: nowrap;font-family: verdana;font-size:14px;font-color:#000000;background-color: #f5f4ed;-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #808074;box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
@@ -197,7 +206,7 @@ Legenda označení útvarů
   "map": {
     "ostatní": ["1", "2", "3", "4", "5"]
   },
-  "group": ["SharedData5f5a0b2f"]
+  "group": ["SharedDataab25d38d"]
 }</script>
 </div>
 </div>
@@ -205,8 +214,8 @@ Legenda označení útvarů
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="reactable html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-0e95023c5437c2ef8b07" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-0e95023c5437c2ef8b07">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"nazev":["KVV Karlovy Vary","Velení","Operační oddělení","Oddělení obranných příprav","Oddělení logistiky",null],"categ":["ostatní","ostatní","ostatní","ostatní","ostatní",null],"child_ftes":[34,7,10,9,8,"NA"],"dpth":[2,3,3,3,3,"NA"]},"columns":[{"id":"nazev","name":"Název útvaru","type":"character","minWidth":150},{"id":"categ","name":"Kategorie","type":"factor","minWidth":150},{"id":"child_ftes","name":"Počet míst","type":"numeric","filterable":false,"maxWidth":100},{"id":"dpth","name":"Úroveň řízení","type":"numeric","maxWidth":100}],"filterable":true,"showSortable":true,"crosstalkKey":["1","2","3","4","5","6"],"crosstalkGroup":"SharedData5f5a0b2f","dataKey":"560dbade8aed800080a9609b7398ef5d"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-6ed9b01cfff44e9bd75d" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-6ed9b01cfff44e9bd75d">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"nazev":["KVV Karlovy Vary","Velení","Operační oddělení","Oddělení obranných příprav","Oddělení logistiky",null],"categ":["ostatní","ostatní","ostatní","ostatní","ostatní",null],"child_ftes":[34,7,10,9,8,"NA"],"dpth":[2,3,3,3,3,"NA"]},"columns":[{"id":"nazev","name":"Název útvaru","type":"character","minWidth":150},{"id":"categ","name":"Kategorie","type":"factor","minWidth":150},{"id":"child_ftes","name":"Počet míst","type":"numeric","filterable":false,"maxWidth":100},{"id":"dpth","name":"Úroveň řízení","type":"numeric","maxWidth":100}],"filterable":true,"showSortable":true,"crosstalkKey":["1","2","3","4","5","6"],"crosstalkGroup":"SharedDataab25d38d","dataKey":"560dbade8aed800080a9609b7398ef5d"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
@@ -226,7 +235,7 @@ Legenda označení útvarů
   "map": {
     "Ne": ["1", "2", "3", "4"]
   },
-  "group": ["SharedData5b860164"]
+  "group": ["SharedDataefadfb2d"]
 }</script>
 </div>
 </div>
@@ -234,8 +243,8 @@ Legenda označení útvarů
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="reactable html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-f77bb3067e31c2f70680" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-f77bb3067e31c2f70680">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"level1_nazev":["KVV Karlovy Vary","KVV Karlovy Vary","KVV Karlovy Vary","KVV Karlovy Vary"],"level2_nazev":["Velení","Operační oddělení","Oddělení obranných příprav","Oddělení logistiky"],"mista_celkem":[7,10,9,8],"is_analytical":["Ne","Ne","Ne","Ne"]},"columns":[{"id":"level1_nazev","name":"Úroveň 0","type":"character"},{"id":"level2_nazev","name":"Úroveň 1","type":"character"},{"id":"mista_celkem","name":"Počet míst","type":"numeric","filterable":false},{"id":"is_analytical","name":"is_analytical","type":"character","show":false}],"filterable":true,"showSortable":true,"crosstalkKey":["1","2","3","4"],"crosstalkGroup":"SharedData5b860164","dataKey":"78a3aacec6ee7c0345e47a7f4f397e23"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-e7e0790c0d5058d1dfa2" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-e7e0790c0d5058d1dfa2">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"level1_nazev":["KVV Karlovy Vary","KVV Karlovy Vary","KVV Karlovy Vary","KVV Karlovy Vary"],"level2_nazev":["Velení","Operační oddělení","Oddělení obranných příprav","Oddělení logistiky"],"mista_celkem":[7,10,9,8],"is_analytical":["Ne","Ne","Ne","Ne"]},"columns":[{"id":"level1_nazev","name":"Úroveň 0","type":"character"},{"id":"level2_nazev","name":"Úroveň 1","type":"character"},{"id":"mista_celkem","name":"Počet míst","type":"numeric","filterable":false},{"id":"is_analytical","name":"is_analytical","type":"character","show":false}],"filterable":true,"showSortable":true,"crosstalkKey":["1","2","3","4"],"crosstalkGroup":"SharedDataefadfb2d","dataKey":"78a3aacec6ee7c0345e47a7f4f397e23"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
