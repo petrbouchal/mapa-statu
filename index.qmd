@@ -7,7 +7,7 @@ date: today
 Tady jste správně, pokud:
 
 - se snažíte zjistit, kde ve struktuře nějakého úřadu se nachází konkrétní útvar
-- byste chtěli větět, kde a ve kterých úřadech najdete nějaké typy útvarů
+- byste chtěli vědět, kde a ve kterých úřadech najdete nějaké typy útvarů
 - vás zajímají útvary pracující s poznatky napříč státní správou
 
 
@@ -56,7 +56,7 @@ Seznam všech útvarů pracujících s poznatky
 
 ### Zdroje a obsah dat
 
-Pracujeme s údaji se systemizace služebních úřadů na základě [dostupných otevřených dat](https://data.gov.cz/datov%C3%A1-sada?iri=https://data.gov.cz/zdroj/datov%C3%A9-sady/00007064/846439496).
+Pracujeme s údaji ze systemizace služebních úřadů na základě [dostupných otevřených dat](https://data.gov.cz/datov%C3%A1-sada?iri=https://data.gov.cz/zdroj/datov%C3%A9-sady/00007064/846439496).
 
 Dostupné jsou údaje o celé struktuře úřadů, které spadají pod státní službu. Těch je celkem 237 a data ukazují jejich strukturu od oddělení po vedení.
 
