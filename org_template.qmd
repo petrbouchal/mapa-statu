@@ -55,7 +55,7 @@ parents <- orgdata_edges_processed |>
 layout_code <- if(urad_zkr == "ÚP ČR") "layout_with_kk" else "layout_nicely"
 ```
 
-[←zpět na seznam](index.html)
+[←zpět na seznam](javascript:history.back())
 
 :::{.panel-tabset}
 
