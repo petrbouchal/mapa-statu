@@ -1,4 +1,7 @@
 make_org_visnetwork <- function(graph, urad_zkr, igraph_layout) {
+
+  htmlwidgets::setWidgetIdSeed(seed = 10, kind = NULL, normal.kind = NULL)
+
   orgdata_mini_edges <- extract_orgdata_edges_from_graph(graph, urad_zkratka == urad_zkr)
   orgdata_mini_nodes <- extract_orgdata_nodes_from_graph(graph, urad_zkratka == urad_zkr)
 
@@ -34,3 +37,4 @@ make_org_visnetwork <- function(graph, urad_zkr, igraph_layout) {
   }
   vn_jednomini
 }
+

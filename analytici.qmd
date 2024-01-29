@@ -70,7 +70,7 @@ urad_rect <- orgdata_rect |>
 ```
 
 ```{r}
-nodes_shared <- SharedData$new(nodes_sub)
+nodes_shared <- SharedData$new(nodes_sub, group = "nodes")
 ```
 
 :::{.panel-input}
@@ -119,5 +119,5 @@ reactable(nodes_shared,
                          ),
           searchable = TRUE,
           filterable = TRUE, sortable = TRUE, showSortIcon = TRUE,
-          showSortable = TRUE)
+          showSortable = TRUE, elementId = "reactable_nodes_analytici_all")
 ```

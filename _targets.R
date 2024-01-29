@@ -20,6 +20,8 @@ list2env(cnf, envir = .GlobalEnv)
 names(cnf) <- names(nms_orig)
 rm(nms_orig)
 
+htmlwidgets::setWidgetIdSeed(seed = 10, kind = NULL, normal.kind = NULL)
+
 # Set target-specific options such as packages.
 tar_option_set(packages = c("dplyr", "tidygraph", "statnipokladna", "here", "readxl", "xml2",
                             "janitor", "curl", "stringr", "conflicted",

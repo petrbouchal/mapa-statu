@@ -16,6 +16,8 @@ knitr::opts_chunk$set(
   message = FALSE,
   fig.retina = 3
 )
+
+htmlwidgets::setWidgetIdSeed(seed = 10, kind = NULL, normal.kind = NULL)
 ```
 
 ```{r, include = FALSE}

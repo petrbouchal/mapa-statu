@@ -26,6 +26,7 @@ knitr::opts_chunk$set(fig.path = paste0("figures-org/", params$kraj),
 
 source("R/visnetwork.R")
 source("R/load-orgchart.R")
+htmlwidgets::setWidgetIdSeed(seed = 10, kind = NULL, normal.kind = NULL)
 ```
 
 ```{r load}
@@ -34,6 +35,7 @@ targets::tar_load(urady_tbl)
 targets::tar_load(orgdata_nodes_processed)
 targets::tar_load(orgdata_rect)
 targets::tar_load(orgdata_edges_processed)
+
 ```
 
 ```{r}
@@ -88,7 +90,7 @@ urad_tbl_tbl <- urad_tbl |>
   select(nazev, categ, child_ftes, dpth) |> 
   mutate(categ = as.factor(categ))
 
-urad_tbl_shared <- crosstalk::SharedData$new(urad_tbl_tbl)
+urad_tbl_shared <- crosstalk::SharedData$new(urad_tbl_tbl, group = "urad_tbl")
 ```
 
 - `Kategorie` vyznačuje analytické a podobné útvary (podle názvu), zbylé jsou označeny jako ostatní
@@ -132,7 +134,7 @@ if(nrow(urad_rect) > 0) {
                                                            categ = colDef(name = "Kategorie", minWidth = 150),
                                                            dpth = colDef(name = "Úroveň řízení", maxWidth = 100),
                                                            child_ftes = colDef(name = "Počet míst", maxWidth = 100, filterable = FALSE)
-                       ))
+                       ), elementId = "reactable_urad_tbl_list")
 } else {
   cat("Chybí data")
 }
@@ -142,7 +144,7 @@ if(nrow(urad_rect) > 0) {
 ## Tabulka struktury
 
 ```{r}
-urad_rect_shared <- SharedData$new(urad_rect)
+urad_rect_shared <- SharedData$new(urad_rect, group = "urad_rect")
 ```
 
 :::{.panel-input}
@@ -168,7 +170,8 @@ if(nrow(urad_rect) > 0) {
   reactable(urad_rect_shared, columns = append(levels_spec,
                                                list(is_analytical = colDef(show = FALSE),
                                                     mista_celkem = colDef(name = "Počet míst", filterable = FALSE))),
-            filterable = TRUE, sortable = TRUE, showSortable = TRUE)
+            filterable = TRUE, sortable = TRUE, showSortable = TRUE,
+            elementId = "reactable_urad_tbl_structure")
   
 } else {
   cat("Chybí data")
