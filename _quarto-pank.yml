@@ -4,6 +4,8 @@ project:
   output-dir: "docs-pank"
 
 website:
+  site-url: https://pank.cz/nastroje/mapa-statu
+  repo-url: https://github.com/petrbouchal/mapa-statu
   title: "Mapa státu"
   navbar:
     left:
