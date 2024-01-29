@@ -35,6 +35,7 @@ website:
 
 format:
   html:
+    html-math-method: plain
     lang: cs
     language: cs
     theme:
