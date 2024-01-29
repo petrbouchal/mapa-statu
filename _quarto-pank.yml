@@ -1,7 +1,7 @@
 project:
   type: website
   resources: [/data-export]
-  output-dir: "site-pank"
+  output-dir: "docs-pank"
 
 website:
   title: "Mapa státu"

@@ -11,7 +11,7 @@ render_org <- function(file, org_id, org_nazev, profile = NULL, ...) {
             "--output", output_file)
   if(!is.null(profile)) args <- c(args, "--profile", profile)
 
-  if(profile != "standalone") site_dir <- paste0("site", "-", profile) else site_dir <- "docs"
+  if(profile != "standalone") site_dir <- paste0("docs", "-", profile) else site_dir <- "docs"
 
   # print(args)
 
