@@ -25,7 +25,7 @@ make_org_visnetwork <- function(graph, urad_zkr, igraph_layout) {
 
   if (!missing(igraph_layout)) {
     vn_jednomini <- vn_jednomini_base |>
-      visIgraphLayout(layout = igraph_layout)
+      visIgraphLayout(layout = igraph_layout, randomSeed = 1)
   }  else {
     vn_jednomini <- vn_jednomini_base |>
       visHierarchicalLayout(sortMethod = "directed",
