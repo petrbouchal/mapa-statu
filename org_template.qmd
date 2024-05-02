@@ -3,7 +3,7 @@ title: "{{< meta pagetitle >}}"
 title-prefix: ""
 editor: source
 params:
-  org_id: 11001131
+  org_id: 11001018
   org_nazev: Finanční úřad pro Jihomoravský kraj
   # org_id: 11000003
   # org_nazev: Ministerstvo dopravy
