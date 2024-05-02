@@ -4,7 +4,7 @@ default:
 
   # orgchart_xml: "~/cpers/statnisluzba-downloader/soubory-struktura/ISoSS_Opendata_OSYS_OSSS_20220215T020004.xml"
   orgchart_url: "https://portal.isoss.cz/opendata/ISoSS_Opendata_OSYS_OSSS.xml"
-  orgchart_xml_local: "/Users/petr/cpers/statnisluzba-downloader/soubory-struktura/ISoSS_Opendata_OSYS_OSSS_20240109T001657.xml"
+  orgchart_xml_local: "/Users/petr/cpers/statnisluzba-downloader/soubory-struktura/ISoSS_Opendata_OSYS_OSSS_20240402T120140.xml"
   orgchart_xml_target: "data-input/orgchart/orgchart.xml"
   orgchart_use_local: true
 
