@@ -50,7 +50,7 @@ extract_orgdata_raw <- function(path, urady_tbl) {
     replace_na(list(parent = "stat", mista_prac = 0, mista_sluz = 0)) |>
     left_join(urady_tbl |> select(-urad_id_ds), by = "id") |>
     add_row(id = "stat", nazev = "nic", urad_zkratka = "stat", urad_nazev = "nic") |>
-    fill(urad_zkratka, urad_nazev, .direction = "down")
+    fill(urad_zkratka, urad_nazev, urad_skupina, .direction = "down")
 
   return(dtt)
 
