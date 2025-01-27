@@ -17,9 +17,9 @@ Tady jste správně, pokud:
 
 :::{.box-height}
 
-### Organizační schémata všech organizací
+### Organizační schémata všech organizací (služebních úřadů)
 
-Vyberte jednu ze 237 organizací a prohlédněte si jeji organizačních schéma.
+Vyberte jednu ze 162 organizací a prohlédněte si jeji organizačních schéma.
 
 Ve schématech jsou vyznačené typy útvarů pracujících s poznatky.
 
@@ -33,7 +33,7 @@ Seznam útvarů je u každé organizace i v prohledávatelné tabulce.
 
 ::: {.g-col-12 .g-col-md-6 .box-height}
 
-### Útvary pracující z poznatky v celé státní správě
+### Útvary pracující z poznatky v celé státní službě
 
 :::{.box-height}
 
