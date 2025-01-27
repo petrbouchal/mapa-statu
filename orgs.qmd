@@ -18,4 +18,4 @@ listing:
 :::
 
 
-Zpracovaná data jsou k mání na <https://github.com/petrbouchal/systemizace/tree/main/data-export>
+Zpracovaná data jsou k mání na <https://github.com/petrbouchal/mapa-statu/tree/main/data-export>
