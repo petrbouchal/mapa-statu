@@ -49,7 +49,7 @@ suppressMessages(suppressWarnings(source("_targets_packages.R")))
 
 t_orgchart <- list(
   tar_download(orgdata_xml_fresh, c_orgchart_url, c_orgchart_xml_target),
-  tar_target(orgdata_xml, if(c_orgchart_use_local) c_orgchart_xml_local else orgdata_xml_fresh),
+  tar_file(orgdata_xml, if(c_orgchart_use_local) c_orgchart_xml_local else orgdata_xml_fresh),
   tar_target(urady_tbl, extract_urady(orgdata_xml)),
   tar_target(orgdata_raw, extract_orgdata_raw(orgdata_xml, urady_tbl)),
 
