@@ -84,7 +84,9 @@ t_export <- list(
 # so reextract this
 # note: perhaps we can do this with dynamic branching instead?
 
-org_tbl <- extract_urady(c_orgchart_xml_local)
+orgchart_xml <- if(c_orgchart_use_local) c_orgchart_xml_local else c_orgchart_xml_target
+
+org_tbl <- extract_urady(orgchart_xml)
 org_ids <- make_org_ids(org_tbl)
 
 org_pages <- list(
