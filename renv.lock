@@ -1847,13 +1847,10 @@
     },
     "renv": {
       "Package": "renv",
-      "Version": "1.0.7",
-      "Source": "Repository",
+      "Version": "1.1.5",
+      "OS_type": null,
       "Repository": "CRAN",
-      "Requirements": [
-        "utils"
-      ],
-      "Hash": "397b7b2a265bc5a7a06852524dabae20"
+      "Source": "Repository"
     },
     "rlang": {
       "Package": "rlang",
@@ -1891,13 +1888,13 @@
     },
     "rprojroot": {
       "Package": "rprojroot",
-      "Version": "2.0.4",
+      "Version": "2.1.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R"
       ],
-      "Hash": "4c8415e0ec1e29f3f4f6fc108bef0144"
+      "Hash": "b2453de2d29aa646afe4781defdc7903"
     },
     "rstudioapi": {
       "Package": "rstudioapi",

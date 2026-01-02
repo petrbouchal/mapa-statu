@@ -348,104 +348,6 @@
   - Fin. úřady
   zkratka: SFÚ
   link: <a href ="org_11001022.html">Specializovaný finanční úřad</a>
-- title: KVV hlavní město Praha
-  href: org_11001025.html
-  url: org_11001025.html
-  categories:
-  - 'AČR: Krajská velitelství'
-  zkratka: KVV HMP
-  link: <a href ="org_11001025.html">KVV hlavní město Praha</a>
-- title: KVV Praha – Středočeský kraj
-  href: org_11001026.html
-  url: org_11001026.html
-  categories:
-  - 'AČR: Krajská velitelství'
-  zkratka: KVV Pra SČK
-  link: <a href ="org_11001026.html">KVV Praha – Středočeský kraj</a>
-- title: KVV Plzeň
-  href: org_11001027.html
-  url: org_11001027.html
-  categories:
-  - 'AČR: Krajská velitelství'
-  zkratka: KVV Plz
-  link: <a href ="org_11001027.html">KVV Plzeň</a>
-- title: KVV České Budějovice
-  href: org_11001028.html
-  url: org_11001028.html
-  categories:
-  - 'AČR: Krajská velitelství'
-  zkratka: KVV ČB
-  link: <a href ="org_11001028.html">KVV České Budějovice</a>
-- title: KVV Karlovy Vary
-  href: org_11001029.html
-  url: org_11001029.html
-  categories:
-  - 'AČR: Krajská velitelství'
-  zkratka: KVV KV
-  link: <a href ="org_11001029.html">KVV Karlovy Vary</a>
-- title: KVV Ústí nad Labem
-  href: org_11001030.html
-  url: org_11001030.html
-  categories:
-  - 'AČR: Krajská velitelství'
-  zkratka: KVV ÚL
-  link: <a href ="org_11001030.html">KVV Ústí nad Labem</a>
-- title: KVV Hradec Králové
-  href: org_11001031.html
-  url: org_11001031.html
-  categories:
-  - 'AČR: Krajská velitelství'
-  zkratka: KVV HK
-  link: <a href ="org_11001031.html">KVV Hradec Králové</a>
-- title: KVV Pardubice
-  href: org_11001032.html
-  url: org_11001032.html
-  categories:
-  - 'AČR: Krajská velitelství'
-  zkratka: KVV Par
-  link: <a href ="org_11001032.html">KVV Pardubice</a>
-- title: KVV Liberec
-  href: org_11001033.html
-  url: org_11001033.html
-  categories:
-  - 'AČR: Krajská velitelství'
-  zkratka: KVV Lib
-  link: <a href ="org_11001033.html">KVV Liberec</a>
-- title: KVV Jihlava
-  href: org_11001034.html
-  url: org_11001034.html
-  categories:
-  - 'AČR: Krajská velitelství'
-  zkratka: KVV Jih
-  link: <a href ="org_11001034.html">KVV Jihlava</a>
-- title: KVV Brno
-  href: org_11001035.html
-  url: org_11001035.html
-  categories:
-  - 'AČR: Krajská velitelství'
-  zkratka: KVV Brno
-  link: <a href ="org_11001035.html">KVV Brno</a>
-- title: KVV Ostrava
-  href: org_11001036.html
-  url: org_11001036.html
-  categories:
-  - 'AČR: Krajská velitelství'
-  zkratka: KVV Ost
-  link: <a href ="org_11001036.html">KVV Ostrava</a>
-- title: KVV Olomouc
-  href: org_11001037.html
-  url: org_11001037.html
-  categories:
-  - 'AČR: Krajská velitelství'
-  zkratka: KVV Olo
-  link: <a href ="org_11001037.html">KVV Olomouc</a>
-- title: KVV Zlín
-  href: org_11001038.html
-  url: org_11001038.html
-  categories:
-  - 'AČR: Krajská velitelství'
-  zkratka: KVV Zlín
-  link: <a href ="org_11001038.html">KVV Zlín</a>
 - title: Újezdní úřad Boletice
   href: org_11001040.html
   url: org_11001040.html
@@ -1132,3 +1034,17 @@
   - Ostatní
   zkratka: IPZS
   link: <a href ="org_11001237.html">Institut posuzování zdravotního stavu</a>
+- title: Inspekce silniční dopravy
+  href: org_11001238.html
+  url: org_11001238.html
+  categories:
+  - Ostatní
+  zkratka: INSID
+  link: <a href ="org_11001238.html">Inspekce silniční dopravy</a>
+- title: Národní lesnický institut
+  href: org_11001239.html
+  url: org_11001239.html
+  categories:
+  - Ostatní
+  zkratka: NLI
+  link: <a href ="org_11001239.html">Národní lesnický institut</a>
