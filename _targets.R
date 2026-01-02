@@ -92,7 +92,8 @@ org_ids <- make_org_ids(org_tbl)
 org_pages <- list(
   tar_file(org_qmd_template, "org_template.qmd"),
   # generate yaml file which will populate the listing on the index page
-  tar_file(org_listing_yaml, make_org_listing_yaml(urady_tbl, "org_listing.yaml")),
+  tar_file(org_listing_yaml, make_org_listing_yaml(urady_tbl, "org_listing.yaml"), 
+           priority = 0.5),
   # generate a page for each of ~200 orgs
   tar_map(
     values = tibble(org_id = unname(org_ids),
@@ -104,7 +105,7 @@ org_pages <- list(
                                    # in org_template.qmd
                                    orgdata_graph, orgdata_date, urady_tbl,
                                    # plus to make this run after site generation
-                                   doc_html),
+                                   doc_html, org_listing_yaml),
                priority = 0.001, format = "file")),
   # generate a page for each of ~200 orgs
   tar_map(
@@ -117,7 +118,7 @@ org_pages <- list(
                                    # in org_template.qmd
                                    orgdata_graph, orgdata_date, urady_tbl,
                                    # plus to make this run after site generation
-                                   doc_html_pank),
+                                   doc_html_pank, org_listing_yaml),
                priority = 0.002, format = "file")
     )
   )
